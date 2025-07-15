@@ -22,6 +22,7 @@
 }
 @import "header";
 @import "hero";
+@import "block";
 body {
   color: #fff;
   font-family: "Segoe UI";
@@ -30,7 +31,9 @@ body {
   font-weight: 400;
   background: #1a073f;
 }
-
+.wrapper {
+  overflow: hidden;
+}
 .container {
   max-width: 1366px;
   margin: 0 auto;

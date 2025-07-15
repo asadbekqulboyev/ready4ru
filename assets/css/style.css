@@ -103,13 +103,23 @@
   background-repeat: no-repeat;
   padding-top: 259px;
 }
+.hero .star_right {
+  position: absolute;
+  right: 10%;
+  top: 29%;
+}
+.hero .shadow {
+  position: absolute;
+  top: -70%;
+  left: -50%;
+}
 .hero .container {
   position: relative;
 }
 .hero_elipse_big {
   position: absolute;
   right: -150px;
-  top: 0;
+  top: -150px;
 }
 .hero_title {
   color: #fff;
@@ -139,8 +149,19 @@
 .hero_tab_btns .hero_tab_btn:hover {
   background: #6e44d9;
 }
+.hero_tab_content {
+  position: relative;
+}
+.hero_tab_content .hand_img {
+  position: absolute;
+  right: -32%;
+  top: -190%;
+  z-index: 2;
+}
 .hero_tab_content .tab_item .button {
   transition: all 0.2s linear;
+  position: relative;
+  z-index: 2;
 }
 .hero_tab_content .tab_item .button:hover {
   background: transparent;
@@ -158,6 +179,104 @@
   bottom: 0;
   left: -182px;
 }
+.hero_elipse_small.img2 {
+  left: -15%;
+  bottom: 37%;
+}
+
+.blocks {
+  padding: 110px 0 90px;
+  background: url("../images/block_bg.png") no-repeat center;
+  background-size: cover;
+}
+
+.tab_item_blocks {
+  gap: 40px 0;
+}
+.tab_item_blocks .tab_item_block {
+  width: calc(50% - 20px);
+  padding: 52px 40px;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  gap: 32px;
+}
+.tab_item_blocks .tab_item_block_img {
+  position: relative;
+  width: 206px;
+  height: 206px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: #6e44d9;
+}
+.tab_item_blocks .tab_item_block_img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.tab_item_blocks .tab_item_block_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(74.35% 74.35% at 23.41% 22.78%, rgba(207, 6, 242, 0.36) 0%, rgba(199, 5, 239, 0.36) 5%, rgba(141, 2, 220, 0.36) 50%, rgba(105, 0, 208, 0.36) 83%, rgba(92, 0, 204, 0.36) 100%);
+  filter: blur(40px);
+}
+.tab_item_blocks .tab_item_block:nth-child(3), .tab_item_blocks .tab_item_block:nth-child(4) {
+  width: 100%;
+  justify-content: center;
+}
+.tab_item_blocks .tab_item_block:nth-child(3) .tab_item_block_content, .tab_item_blocks .tab_item_block:nth-child(4) .tab_item_block_content {
+  height: fit-content;
+}
+.tab_item_blocks .tab_item_block:nth-child(3) .tab_item_block_title, .tab_item_blocks .tab_item_block:nth-child(4) .tab_item_block_title {
+  font-size: 40px;
+}
+.tab_item_blocks .tab_item_block:nth-child(3) p, .tab_item_blocks .tab_item_block:nth-child(4) p {
+  max-width: 720px;
+  padding-top: 30px;
+}
+.tab_item_blocks .tab_item_block_title {
+  color: #fff;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+.tab_item_blocks .tab_item_block .tab_item_block_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px 0;
+  height: 100%;
+}
+.tab_item_blocks .tab_item_block_lists {
+  gap: 11px;
+  margin-top: 30px;
+}
+.tab_item_blocks .tab_item_block_lists li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  line-height: 21px;
+}
+.tab_item_blocks .tab_item_block_lists li .dot {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  background: #6e44d9;
+  border-radius: 50%;
+}
+.tab_item_blocks .tab_item_block .buttons {
+  margin-top: auto;
+  margin-bottom: 0;
+  gap: 10px 14px;
+}
 
 body {
   color: #fff;
@@ -166,6 +285,10 @@ body {
   font-style: normal;
   font-weight: 400;
   background: #1a073f;
+}
+
+.wrapper {
+  overflow: hidden;
 }
 
 .container {

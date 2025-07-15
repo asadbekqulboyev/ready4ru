@@ -4,13 +4,23 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 259px;
+  .star_right {
+    position: absolute;
+    right: 10%;
+    top: 29%;
+  }
+  .shadow {
+    position: absolute;
+    top: -70%;
+    left: -50%;
+  }
   .container {
     position: relative;
   }
   &_elipse_big {
     position: absolute;
     right: -150px;
-    top: 0;
+    top: -150px;
   }
   &_title {
     color: #fff;
@@ -41,9 +51,18 @@
     }
   }
   &_tab_content {
+    position: relative;
+    .hand_img {
+      position: absolute;
+      right: -32%;
+      top: -190%;
+      z-index: 2;
+    }
     .tab_item {
       .button {
         transition: all 0.2s linear;
+        position: relative;
+        z-index: 2;
         &:hover {
           background: transparent;
           color: #6e44d9;
@@ -62,8 +81,11 @@
     position: absolute;
     bottom: 0;
     left: -182px;
+    &.img2 {
+      left: -15%;
+      bottom: 37%;
+    }
   }
 }
-.tab_item_blocks{
-    
+.tab_item_blocks {
 }
