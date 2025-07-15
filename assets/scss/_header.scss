@@ -1,0 +1,78 @@
+.header {
+  padding: 24px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  .container {
+    gap: 24px 0;
+  }
+  &_top_left {
+    gap: 45px;
+    .lcation {
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+      img {
+        line-height: 0;
+      }
+    }
+  }
+  &_top_right {
+    gap: 40px;
+  }
+  &_top_menu {
+    gap: 33px;
+    a {
+      color: #fff;
+      transition: all 0.2s linear;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      &:hover {
+        color: #6e44d9;
+      }
+    }
+  }
+  .buttonlist {
+    gap: 14px;
+  }
+  &_bottom {
+    gap: 14px;
+    ul {
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(30px);
+      gap: 19px;
+      display: flex;
+      padding: 22px 30px;
+      align-items: center;
+      gap: 19px;
+      flex: 1 0 0;
+      a {
+        display: block;
+        color: #fff;
+        padding-right: 19px;
+        border-right: 1px solid rgba(255, 255, 255, 0.27);
+        transition: all 0.2s linear;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        &:hover {
+          color: #6e44d9;
+        }
+      }
+
+      li:last-child {
+        a {
+          border: none;
+          padding-right: 0;
+        }
+      }
+    }
+    .button {
+      align-items: center;
+    }
+  }
+}

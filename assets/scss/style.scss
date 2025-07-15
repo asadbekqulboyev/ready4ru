@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_Boldi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_UI.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "header";
+@import "hero";
+body {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  background: #1a073f;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.flex {
+  display: flex;
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.start {
+    justify-content: flex-start;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.a_center {
+    align-items: center;
+  }
+
+  &.a_start {
+    align-items: flex-start;
+  }
+
+  &.a_end {
+    align-items: flex-end;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.button {
+  cursor: pointer;
+  display: flex;
+  padding: 13px 29px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  &:hover {
+    background: #6e44d9;
+    border-color: #6e44d9;
+  }
+  &.light {
+    background: #fff;
+    color: #6e44d9;
+    &:hover {
+      background: #6e44d9;
+      color: #fff;
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+  &.blue {
+    border-radius: 10px;
+    background: #6e44d9;
+    color: #fff;
+    border-color: transparent;
+    &:hover {
+      border-color: #fff;
+      background: transparent;
+    }
+  }
+}
