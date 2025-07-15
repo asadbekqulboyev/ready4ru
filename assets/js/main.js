@@ -13,4 +13,32 @@ $(document).ready(function () {
         $('.tab_item').hide();
         $(target).fadeIn(200);
     });
+    $('.modal_item').hide();
+    $('.modal_item').first().fadeIn(200);
+
+    $('.modal_tab_btn').on('click', function (e) {
+      e.preventDefault();
+      $('.modal_tab_btn').removeClass('active');
+      $(this).addClass('active');
+      const target = $(this).attr('href');
+
+      // Barcha tab kontentlarini fadeOut
+      $('.modal_item:visible').fadeOut(200, function () {
+        // Faqat kerakligiga fadeIn
+        $(target).fadeIn(200);
+      });
+    });
+    $('.modal_exit').click(function () {
+      $('.modal').fadeOut(200);
+      
+    });
+    $('.lcation').click(function(e){
+      e.preventDefault();
+      $('.modal').fadeIn(200);
+    })
+    $('.modal_links a').click(function(e){
+      e.preventDefault();
+      $('.lcation span').text($(this).text());
+      $('.modal').fadeOut(200);
+    })
 });

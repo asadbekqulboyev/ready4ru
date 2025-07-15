@@ -1,0 +1,143 @@
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background: #00000076;
+  z-index: 100;
+  display: none ;
+  &_content {
+    padding: 50px 52px;
+    border-radius: 20px;
+    background: #fff;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 677px;
+    height: fit-content;
+    .modal_exit {
+      cursor: pointer;
+      display: flex;
+      width: 40px;
+      height: 40px;
+      user-select: none;
+      color: #0a2540;
+      align-items: center;
+      justify-content: center;
+      font-size: 39px;
+      line-height: 0;
+      text-align: center;
+      font-weight: 300;
+      gap: 10px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      border-radius: 70px;
+      border: 1px solid #0a2540;
+      span {
+        position: relative;
+        top: -4px;
+      }
+      &:hover {
+        background: radial-gradient(
+          74.35% 74.35% at 75.62% 21.87%,
+          #cf06f2 0%,
+          #c705ef 5%,
+          #8d02dc 50%,
+          #6900d0 83%,
+          #5c00cc 100%
+        );
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+  &_title {
+    color: #0a2540;
+    font-family: "Segoe UI";
+    font-size: 49px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    border-bottom: 1px dotted #eee;
+    padding-bottom: 21px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      max-width: 114.906px;
+      height: 4px;
+      background: #6e44d9;
+      bottom: 0px;
+      left: 0;
+      display: block;
+      clip-path: polygon(0 0, 100% 0, 90.5% 100%, 0% 100% /* chap pastki */);
+    }
+  }
+  &_tab_btns {
+    padding: 21px 0;
+    justify-content: space-between;
+    gap: 7px;
+    border-bottom: 1px dotted #eee;
+    a {
+      display: flex;
+      width: 53px;
+      height: 46px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 50px;
+      border: 1px solid #a3a3a3;
+      color: #a3a3a3;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      transition: all 0.3s ease;
+      &.active {
+        background: radial-gradient(
+          74.35% 74.35% at 75.62% 21.87%,
+          #cf06f2 0%,
+          #c705ef 5%,
+          #8d02dc 50%,
+          #6900d0 83%,
+          #5c00cc 100%
+        );
+        color: #fff;
+      }
+      &:hover {
+        background: radial-gradient(
+          74.35% 74.35% at 75.62% 21.87%,
+          #cf06f2 0%,
+          #c705ef 5%,
+          #8d02dc 50%,
+          #6900d0 83%,
+          #5c00cc 100%
+        );
+        color: #fff;
+      }
+    }
+  }
+  &_links {
+    gap: 51px;
+    padding-top: 27px;
+    ul {
+      gap: 26px;
+
+      a {
+        color: #0a2540;
+        font-family: "Segoe UI";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        border-bottom: 1px solid transparent;
+        &:hover {
+          border-color: #0a2540;
+        }
+      }
+    }
+  }
+}

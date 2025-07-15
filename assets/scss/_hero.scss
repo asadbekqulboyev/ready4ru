@@ -34,6 +34,8 @@
   &_tab_btns {
     gap: 9px;
     margin-top: 40px;
+    position: relative;
+    z-index: 22;
     .hero_tab_btn {
       border-radius: 9px 9px 0px 0px;
       background: #332656;
@@ -42,6 +44,10 @@
       padding: 13px 23px;
       gap: 12px;
       transition: all 0.2s linear;
+      @media (max-width: 1200px) {
+        padding: 13px 15px;
+        gap: 8px;
+      }
       &.active {
         background: #6e44d9;
       }
@@ -63,10 +69,17 @@
         transition: all 0.2s linear;
         position: relative;
         z-index: 2;
+        transition: all 0.2s linear;
+        flex: 0 0 auto;
         &:hover {
-          background: transparent;
-          color: #6e44d9;
-          border-color: #6e44d9;
+          background: radial-gradient(
+            74.35% 74.35% at 75.62% 21.87%,
+            #cf06f2 0%,
+            #c705ef 5%,
+            #8d02dc 50%,
+            #6900d0 83%,
+            #5c00cc 100%
+          );
         }
       }
       .tab_item_content {
@@ -74,6 +87,10 @@
         background: #fff;
         padding: 32px 40px;
         color: #0a2540;
+      }
+      img {
+        max-width: 30%;
+        object-fit: contain;
       }
     }
   }
@@ -86,6 +103,8 @@
       bottom: 37%;
     }
   }
-}
-.tab_item_blocks {
+  &_tab {
+    position: relative;
+    z-index: 22;
+  }
 }

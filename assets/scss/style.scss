@@ -23,6 +23,7 @@
 @import "header";
 @import "hero";
 @import "block";
+@import "modal";
 body {
   color: #fff;
   font-family: "Segoe UI";
@@ -33,6 +34,8 @@ body {
 }
 .wrapper {
   overflow: hidden;
+  background: url("../images/block_bg.png") no-repeat center;
+  background-size: cover;
 }
 .container {
   max-width: 1366px;
@@ -99,15 +102,30 @@ li {
   width: fit-content;
   border-radius: 10px;
   border: 1px solid #fff;
+  transition: all 0.2s linear;
   &:hover {
-    background: #6e44d9;
-    border-color: #6e44d9;
+    background: radial-gradient(
+      74.35% 74.35% at 75.62% 21.87%,
+      #cf06f2 0%,
+      #c705ef 5%,
+      #8d02dc 50%,
+      #6900d0 83%,
+      #5c00cc 100%
+    );
   }
   &.light {
     background: #fff;
     color: #6e44d9;
+    transition: all 0.2s linear;
     &:hover {
-      background: #6e44d9;
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
       color: #fff;
       svg path {
         fill: #fff;
@@ -120,8 +138,74 @@ li {
     color: #fff;
     border-color: transparent;
     &:hover {
-      border-color: #fff;
-      background: transparent;
+      border-color: transparent;
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
+    }
+  }
+}
+.footer {
+  padding-bottom: 90px;
+  .container {
+    @media (max-width: 1091px) {
+      flex-wrap: wrap;
+      gap: 20px 0;
+    }
+    .footer_menu {
+      gap: 14px;
+      @media (max-width: 1091px) {
+        width: 100%;
+      }
+    }
+  }
+  ul {
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(30px);
+    gap: 19px;
+    display: flex;
+    padding: 22px 30px;
+    align-items: center;
+    gap: 19px;
+    flex: 1 0 0;
+    @media (max-width: 1345px) {
+      gap: 8px;
+    }
+    @media (max-width: 1150px) {
+      padding: 22px 20px;
+    }
+    a {
+      display: block;
+      color: #fff;
+      padding-right: 19px;
+      border-right: 1px solid rgba(255, 255, 255, 0.27);
+      transition: all 0.2s linear;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      @media (max-width: 1345px) {
+        padding-right: 8px;
+        font-size: 15px;
+      }
+      @media (max-width: 1150px) {
+        font-size: 14px;
+      }
+      &:hover {
+        color: #6e44d9;
+      }
+    }
+
+    li:last-child {
+      a {
+        border: none;
+        padding-right: 0;
+      }
     }
   }
 }

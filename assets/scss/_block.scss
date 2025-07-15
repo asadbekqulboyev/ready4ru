@@ -1,7 +1,11 @@
 .blocks {
   padding: 110px 0 90px;
-  background: url("../images/block_bg.png") no-repeat center;
-  background-size: cover;
+  position: relative;
+  &_shadow {
+    position: absolute;
+    right: 0;
+    top: -400px;
+  }
 }
 .tab_item_blocks {
   gap: 40px 0;
@@ -12,6 +16,10 @@
     border: 2px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(15px);
     gap: 32px;
+    @media (max-width: 1200px) {
+      padding: 32px 20px;
+      gap: 20px;
+    }
     &_img {
       position: relative;
       width: 206px;
@@ -20,6 +28,14 @@
       border-radius: 50%;
       flex: 0 0 auto;
       background: #6e44d9;
+      @media (max-width: 1300px) {
+        width: 170px;
+        height: 170px;
+      }
+      @media (max-width: 1200px) {
+        width: 130px;
+        height: 130px;
+      }
       img {
         width: 100%;
         object-fit: cover;
@@ -67,6 +83,9 @@
       font-style: normal;
       font-weight: 700;
       line-height: 45px;
+      @media (max-width: 1200px) {
+        font-size: 28px;
+      }
     }
     .tab_item_block_content {
       display: flex;
@@ -84,6 +103,10 @@
         align-items: center;
         gap: 9px;
         line-height: 21px;
+        @media (max-width: 1200px) {
+          gap: 5px;
+          font-size: 15px;
+        }
         .dot {
           flex: 0 0 auto;
           width: 8px;
