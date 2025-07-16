@@ -13,6 +13,7 @@
     position: absolute;
     top: -70%;
     left: -50%;
+    max-width: 100%;
   }
   .container {
     position: relative;
@@ -30,12 +31,24 @@
     font-weight: 700;
     line-height: 78px;
     max-width: 967px;
+    @media (max-width: 992px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
   }
   &_tab_btns {
     gap: 9px;
     margin-top: 40px;
     position: relative;
     z-index: 22;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 992px) {
+      overflow-x: auto;
+      width: calc(100% + 30px);
+      padding-right: 30px;
+    }
     .hero_tab_btn {
       border-radius: 9px 9px 0px 0px;
       background: #332656;
@@ -47,6 +60,17 @@
       @media (max-width: 1200px) {
         padding: 13px 15px;
         gap: 8px;
+      }
+      @media (max-width: 992px) {
+        flex: 0 0 auto;
+      }
+      br {
+        @media (max-width: 1200px) {
+          display: none;
+        }
+        @media (max-width: 992px) {
+          display: inline-block;
+        }
       }
       &.active {
         background: #6e44d9;
@@ -63,6 +87,13 @@
       right: -32%;
       top: -190%;
       z-index: 2;
+      @media (max-width: 1200px) {
+        width: 356px;
+        top: -130%;
+      }
+      @media (max-width: 992px) {
+        display: none;
+      }
     }
     .tab_item {
       .button {
@@ -87,6 +118,9 @@
         background: #fff;
         padding: 32px 40px;
         color: #0a2540;
+        @media (max-width: 992px) {
+          gap: 20px;
+        }
       }
       img {
         max-width: 30%;

@@ -41,4 +41,17 @@ $(document).ready(function () {
       $('.lcation span').text($(this).text());
       $('.modal').fadeOut(200);
     })
+    $('.hamburger').click(function(e){
+      e.preventDefault();
+      $(this).toggleClass('active');
+      $('.header_top_menu').toggleClass('active');
+      $('.header_menu_responsive').toggleClass('active');
+    })
+});
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $('.header').addClass('active');
+  } else {
+    $('.header').removeClass('active');
+  }
 });
