@@ -117,6 +117,9 @@
       font-weight: 600;
       line-height: normal;
       transition: all 0.3s ease;
+      @media (max-width: 768px) {
+        width: 50px;
+      }
       &.active {
         background: radial-gradient(
           74.35% 74.35% at 75.62% 21.87%,

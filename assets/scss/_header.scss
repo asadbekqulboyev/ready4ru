@@ -79,6 +79,11 @@
         font-weight: 600;
         line-height: 24px;
       }
+      span {
+        @media (max-width: 768px) {
+          flex: 0 0 auto;
+        }
+      }
     }
   }
   &_top_menu {
