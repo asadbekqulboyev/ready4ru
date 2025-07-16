@@ -850,6 +850,7 @@
   top: 20px;
   border-radius: 70px;
   border: 1px solid #0a2540;
+  z-index: 121;
 }
 .modal_content .modal_exit span {
   position: relative;
