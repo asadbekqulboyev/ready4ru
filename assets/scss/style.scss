@@ -31,11 +31,19 @@ body {
   font-style: normal;
   font-weight: 400;
   background: #1a073f;
+  transition: all 0.2s linear;
+  &.hidden {
+    overflow: hidden;
+  }
 }
 .wrapper {
   overflow: hidden;
   background: url("../images/block_bg.png") no-repeat center;
   background-size: cover;
+  @media (max-width: 556px) {
+    background: url("../images/mobile_bg.png") no-repeat center;
+    background-size: cover;
+  }
 }
 .container {
   max-width: 1366px;

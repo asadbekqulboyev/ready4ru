@@ -46,6 +46,7 @@ $(document).ready(function () {
       $(this).toggleClass('active');
       $('.header_top_menu').toggleClass('active');
       $('.header_menu_responsive').toggleClass('active');
+      $('body').toggleClass('hidden');
     })
 });
 $(window).scroll(function () {

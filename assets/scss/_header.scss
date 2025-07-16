@@ -5,9 +5,13 @@
   top: 0;
   width: 100%;
   z-index: 99;
+  @media (max-width: 650px) {
+    padding-bottom: 0;
+    padding-top: 13px !important;
+  }
   &.active {
     background: #1a073f;
-    padding: 14px 0;
+    padding: 8px 0;
     .container {
       gap: 8px;
     }
@@ -43,6 +47,9 @@
     @media (max-width: 650px) {
       width: 100%;
       justify-content: space-between;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.33);
+      padding-bottom: 14px;
+      padding-top: 14px;
     }
 
     .lcation {
@@ -89,7 +96,7 @@
       font-style: normal;
       font-weight: 400;
       &:hover {
-        color: #FFFFFFB2;
+        color: #ffffffb2;
         text-decoration: underline;
       }
     }
@@ -120,7 +127,14 @@
       transition: all 0.2s linear;
     }
     &.active {
-      background: radial-gradient(74.35% 74.35% at 75.62% 21.87%, #CF06F2 0%, #C705EF 5%, #8D02DC 50%, #6900D0 83%, #5C00CC 100%);
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
       span {
         position: absolute;
         inset: 0;
@@ -136,8 +150,15 @@
         display: none;
       }
     }
-    &:hover{
-      background: radial-gradient(74.35% 74.35% at 75.62% 21.87%, #CF06F2 0%, #C705EF 5%, #8D02DC 50%, #6900D0 83%, #5C00CC 100%);
+    &:hover {
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
     }
   }
   .buttonlist {
@@ -193,12 +214,12 @@
         font-size: 17px;
         font-style: normal;
         font-weight: 400;
-        transition: all .2s linear;
+        transition: all 0.2s linear;
         @media (max-width: 1200px) {
           padding-right: 10px;
         }
         &:hover {
-          color: #FFFFFFB2;
+          color: #ffffffb2;
           text-decoration: underline;
         }
       }
@@ -217,7 +238,7 @@
 
   &_menu_responsive {
     transition: all 0.3s linear;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
     @media (max-width: 768px) {
@@ -262,7 +283,7 @@
             border: none;
             padding: 19px 0;
             width: 100%;
-            border-bottom: 1px dotted rgba(255, 255, 255, 0.27);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
 
             &:hover {
               color: #fff;

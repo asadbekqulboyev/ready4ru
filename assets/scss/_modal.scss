@@ -6,7 +6,10 @@
   left: 0;
   background: #00000076;
   z-index: 100;
-  display: none ;
+  display: none;
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
   &_content {
     padding: 50px 52px;
     border-radius: 20px;
@@ -16,6 +19,18 @@
     margin: auto;
     max-width: 677px;
     height: fit-content;
+    @media (max-width: 768px) {
+      width: calc(100% - 30px);
+      max-height: 100vh;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 650px) {
+      padding: 34px 30px;
+    }
     .modal_exit {
       cursor: pointer;
       display: flex;
@@ -63,6 +78,9 @@
     position: relative;
     border-bottom: 1px dotted #eee;
     padding-bottom: 21px;
+    @media (max-width: 650px) {
+      font-size: 34px;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -81,6 +99,9 @@
     justify-content: space-between;
     gap: 7px;
     border-bottom: 1px dotted #eee;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
     a {
       display: flex;
       width: 53px;
