@@ -102,7 +102,8 @@
       font-weight: 400;
       &:hover {
         color: #ffffffb2;
-        text-decoration: underline;
+        border-bottom: 1px solid #ffffffb2;
+        padding-bottom: 3px;
       }
     }
   }
@@ -210,22 +211,27 @@
           width: calc(33.33% - 10px);
         }
       }
+      li{
+        border-right: 1px solid rgba(255, 255, 255, 0.27);
+      }
       a {
         display: block;
         color: #fff;
-        padding-right: 19px;
-        border-right: 1px solid rgba(255, 255, 255, 0.27);
+        margin-right: 19px;
+        
         transition: all 0.2s linear;
         font-size: 17px;
         font-style: normal;
         font-weight: 400;
         transition: all 0.2s linear;
         @media (max-width: 1200px) {
-          padding-right: 10px;
+          margin-right: 10px;
         }
+        border-bottom: 1px solid transparent;
+        padding-bottom: 3px;
         &:hover {
           color: #ffffffb2;
-          text-decoration: underline;
+          border-color:#ffffffb2;
         }
       }
 
@@ -281,6 +287,7 @@
         li {
           @media (max-width: 768px) {
             width: 100%;
+            border:0;
           }
         }
         a {

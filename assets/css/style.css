@@ -142,7 +142,8 @@
 }
 .header_top_menu a:hover {
   color: rgba(255, 255, 255, 0.6980392157);
-  text-decoration: underline;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6980392157);
+  padding-bottom: 3px;
 }
 .header .hamburger {
   position: relative;
@@ -246,25 +247,29 @@
     width: calc(33.33% - 10px);
   }
 }
+.header_bottom ul li {
+  border-right: 1px solid rgba(255, 255, 255, 0.27);
+}
 .header_bottom ul a {
   display: block;
   color: #fff;
-  padding-right: 19px;
-  border-right: 1px solid rgba(255, 255, 255, 0.27);
+  margin-right: 19px;
   transition: all 0.2s linear;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
   transition: all 0.2s linear;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
 }
 @media (max-width: 1200px) {
   .header_bottom ul a {
-    padding-right: 10px;
+    margin-right: 10px;
   }
 }
 .header_bottom ul a:hover {
   color: rgba(255, 255, 255, 0.6980392157);
-  text-decoration: underline;
+  border-color: rgba(255, 255, 255, 0.6980392157);
 }
 .header_bottom ul li:last-child a {
   border: none;
@@ -320,6 +325,7 @@
 @media (max-width: 768px) {
   .header_menu_responsive .header_bottom ul li {
     width: 100%;
+    border: 0;
   }
 }
 @media (max-width: 768px) {
