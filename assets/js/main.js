@@ -58,17 +58,6 @@ $(document).ready(function () {
         "lang": ":ru"
     })
   )
-  //   solid_ticked.init(
-  //   JSON.stringify({
-  //       "refid": "222502", // yangi refid
-  //       "bgcolor": "#f5f5f5",
-  //       "color": "#f34b58",
-  //       "id": "solid_ticked",
-  //       "lang": ":ru"
-     
-      
-  //   })
-  // )
   });
 
 // });
