@@ -48,6 +48,17 @@ $(document).ready(function () {
       $('.header_menu_responsive').toggleClass('active');
       $('body').toggleClass('hidden');
     })
+    $('#solid_widget').text('Widget yuklandi!');
+    solid_widget.init(
+      JSON.stringify({
+          "refid": "222500",
+          "bgcolor": "#f5f5f5",
+          "color": "#f34b58",
+          "id": "solid_widget",
+          "lang": ":ru"
+      })
+  );
+  
 });
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {

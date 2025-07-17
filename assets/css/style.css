@@ -271,8 +271,10 @@
   color: rgba(255, 255, 255, 0.6980392157);
   border-color: rgba(255, 255, 255, 0.6980392157);
 }
+.header_bottom ul li:last-child {
+  border-right: none;
+}
 .header_bottom ul li:last-child a {
-  border: none;
   padding-right: 0;
 }
 .header_bottom .button {
@@ -329,16 +331,18 @@
   }
 }
 @media (max-width: 768px) {
-  .header_menu_responsive .header_bottom ul a {
-    border: none;
-    padding: 19px 0;
-    width: 100%;
+  .header_menu_responsive .header_bottom ul li {
     border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
+    padding: 19px 0;
+  }
+}
+@media (max-width: 768px) {
+  .header_menu_responsive .header_bottom ul a {
+    width: fit-content;
   }
   .header_menu_responsive .header_bottom ul a:hover {
     color: #fff;
     opacity: 0.9;
-    text-decoration: underline;
   }
 }
 @media (max-width: 768px) {
@@ -957,7 +961,7 @@
 
 body {
   color: #fff;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI" !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -1148,10 +1152,17 @@ li {
     backdrop-filter: blur(30px);
   }
 }
+@media (max-width: 768px) {
+  .footer ul li {
+    padding: 19px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
+    transition: all 0.2s linear;
+  }
+}
 .footer ul a {
   display: block;
   color: #fff;
-  padding-right: 19px;
+  margin-right: 19px;
   border-right: 1px solid rgba(255, 255, 255, 0.27);
   transition: all 0.2s linear;
   font-size: 17px;
@@ -1160,7 +1171,7 @@ li {
 }
 @media (max-width: 1345px) {
   .footer ul a {
-    padding-right: 8px;
+    margin-right: 8px;
     font-size: 15px;
   }
 }
@@ -1173,8 +1184,6 @@ li {
   .footer ul a {
     padding-left: 0;
     border: 0;
-    padding: 19px 0;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
   }
 }
 .footer ul a:hover {
@@ -1204,4 +1213,16 @@ li {
   .footer .button {
     width: 100%;
   }
+}
+
+#solid_widget * {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.form_solid {
+  padding: 0 !important;
+}
+
+#solid_widget {
+  font-family: "Segoe UI" !important;
 }/*# sourceMappingURL=style.css.map */
