@@ -50,16 +50,28 @@ $(document).ready(function () {
     })
     $('#solid_widget').text('Widget yuklandi!');
     solid_widget.init(
-      JSON.stringify({
-          "refid": "222500",
-          "bgcolor": "#f5f5f5",
-          "color": "#f34b58",
-          "id": "solid_widget",
-          "lang": ":ru"
-      })
-  );
-  
-});
+    JSON.stringify({
+        "refid": "222502",
+        "bgcolor": "#f5f5f5",
+        "color": "#f34b58",
+        "id": "solid_widget",
+        "lang": ":ru"
+    })
+  )
+  //   solid_ticked.init(
+  //   JSON.stringify({
+  //       "refid": "222502", // yangi refid
+  //       "bgcolor": "#f5f5f5",
+  //       "color": "#f34b58",
+  //       "id": "solid_ticked",
+  //       "lang": ":ru"
+     
+      
+  //   })
+  // )
+  });
+
+// });
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $('.header').addClass('active');
