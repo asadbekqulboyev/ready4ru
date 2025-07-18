@@ -1152,6 +1152,9 @@ li {
     backdrop-filter: blur(30px);
   }
 }
+.footer ul li {
+  border-right: 1px solid rgba(255, 255, 255, 0.27);
+}
 @media (max-width: 768px) {
   .footer ul li {
     padding: 19px 0;
@@ -1159,11 +1162,13 @@ li {
     transition: all 0.2s linear;
   }
 }
+.footer ul li:last-child {
+  border: 0;
+}
 .footer ul a {
   display: block;
   color: #fff;
   margin-right: 19px;
-  border-right: 1px solid rgba(255, 255, 255, 0.27);
   transition: all 0.2s linear;
   font-size: 17px;
   font-style: normal;

@@ -221,17 +221,20 @@ li {
       backdrop-filter: blur(30px);
     }
     li {
+      border-right: 1px solid rgba(255, 255, 255, 0.27);
       @media (max-width: 768px) {
         padding: 19px 0;
         border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
         transition: all 0.2s linear;
+      }
+      &:last-child{
+        border: 0;
       }
     }
     a {
       display: block;
       color: #fff;
       margin-right: 19px;
-      border-right: 1px solid rgba(255, 255, 255, 0.27);
       transition: all 0.2s linear;
       font-size: 17px;
       font-style: normal;
