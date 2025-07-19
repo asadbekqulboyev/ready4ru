@@ -1160,6 +1160,7 @@ li {
     padding: 19px 0;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
     transition: all 0.2s linear;
+    border-right: 0;
   }
 }
 .footer ul li:last-child {
