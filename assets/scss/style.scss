@@ -164,9 +164,10 @@ li {
     padding-bottom: 40px;
   }
   .container {
+    gap: 10px;
     @media (max-width: 1091px) {
       flex-wrap: wrap;
-      gap: 20px 0;
+      gap: 20px ;
     }
     @media (max-width: 768px) {
       gap: 21px;
@@ -237,7 +238,7 @@ li {
       color: #fff;
       margin-right: 19px;
       transition: all 0.2s linear;
-      font-size: 17px;
+      font-size: 14.5px;
       font-style: normal;
       font-weight: 400;
       @media (max-width: 1345px) {
