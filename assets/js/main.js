@@ -58,6 +58,13 @@ $(document).ready(function () {
         "lang": ":ru"
     })
   )
+  $('.faq_header').on('click', function () {
+    let parent = $(this).closest('.faq_item');
+
+    // Agar FAQ faollashgan bo‘lsa - yopiladi, bo‘lmasa ochiladi
+    parent.toggleClass('active');
+    parent.find('.faq_item_text').stop().slideToggle(300);
+  });
   });
 
 // });
