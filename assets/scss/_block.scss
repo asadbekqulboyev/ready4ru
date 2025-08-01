@@ -24,7 +24,11 @@
     @media (max-width: 768px) {
       gap: 30px;
       padding: 30px 40px;
+      border-radius: 30px;
       flex-direction: column-reverse;
+    }
+    @media (max-width: 556px) {
+      padding: 30px 30px;
     }
     img {
       max-width: 100%;

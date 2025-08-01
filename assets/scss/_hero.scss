@@ -193,6 +193,8 @@
   }
   &_check_items {
     margin-top: 60px;
+    position: relative;
+    z-index: 2;
     @media (max-width: 1024px) {
       flex-wrap: wrap;
       padding-bottom: 20px;
