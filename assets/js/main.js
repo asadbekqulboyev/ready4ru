@@ -51,11 +51,7 @@ $(document).ready(function () {
     $('#solid_widget').text('Widget yuklandi!');
     solid_widget.init(
     JSON.stringify({
-        "refid": "222502",
-        "bgcolor": "#f5f5f5",
-        "color": "#f34b58",
-        "id": "solid_widget",
-        "lang": ":ru"
+      "refid":"222500","bgcolor":"f5f5f5","color":"6E44D9","id":"solid_widget","lang":"en"
     })
   )
   $('.faq_header').on('click', function () {
