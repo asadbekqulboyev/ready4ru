@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  $('.tab_item').hide();
+  $(`.tab_item${$('.hero_tab_btn.active').attr('href')}`).show();
     $('.hero_tab_btn').on('click', function (e) {
         e.preventDefault();
 

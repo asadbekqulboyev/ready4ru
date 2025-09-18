@@ -669,6 +669,63 @@
   right: 0;
   top: -400px;
 }
+.blocks.plastikcard {
+  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .blocks.plastikcard {
+    padding: 80px 0;
+  }
+}
+.blocks .trip_items {
+  padding-top: 50px;
+  padding-bottom: 110px;
+}
+@media (max-width: 1024px) {
+  .blocks .trip_items {
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    gap: 40px 0;
+  }
+}
+.blocks .trip_items .trip_item {
+  width: calc(33.33% - 20px);
+  border-radius: 40px;
+  border: 1px solid #6e44d9;
+  backdrop-filter: blur(15px);
+  padding: 47px 61px 45px 62px;
+  gap: 30px;
+}
+@media (max-width: 1200px) {
+  .blocks .trip_items .trip_item {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .blocks .trip_items .trip_item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .blocks .trip_items .trip_item {
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 30px;
+  }
+}
+.blocks .trip_items .trip_item span {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+@media (max-width: 1200px) {
+  .blocks .trip_items .trip_item span {
+    font-size: 18px;
+  }
+}
 .blocks .block_progress {
   border-radius: 40px;
   border: 1px solid #6e44d9;
@@ -1244,6 +1301,13 @@
   .faq_item .faq_item_title {
     font-size: 19px;
   }
+}
+.faq_item .faq_item_title span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
 }
 .faq_item .faq_item_text {
   display: none;

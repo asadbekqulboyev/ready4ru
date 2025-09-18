@@ -32,11 +32,17 @@
       @media (max-width: 768px) {
         font-size: 19px;
       }
+      span {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+      }
     }
     .faq_item_text {
       display: none;
       padding-top: 16px;
-      
     }
     .faq_arrow img {
       transition: transform 0.3s ease;
