@@ -44,6 +44,9 @@
     font-weight: 700;
     line-height: 78px;
     max-width: 967px;
+    &.max {
+      max-width: 100%;
+    }
     @media (max-width: 992px) {
       font-size: 50px;
       line-height: 60px;
