@@ -1,6 +1,31 @@
 .card {
   position: relative;
   z-index: 2;
+  &.insuranse {
+    padding-top: 110px;
+    @media (max-width: 1024px) {
+      padding-top: 80px;
+    }
+    @media (max-width: 768px) {
+      padding-top: 0px;
+    }
+    .check_content_items {
+      @media (max-width: 768px) {
+        flex-direction: row;
+        gap: 16px 0;
+      }
+    }
+    .check_content_item {
+      @media (max-width: 768px) {
+        width: calc(50% - 5px);
+      }
+      p {
+        @media (max-width: 768px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
   &_items {
     margin-top: 50px;
     padding-bottom: 50px;
@@ -72,6 +97,7 @@
     &_items {
       margin-top: 30px;
       gap: 24px;
+      flex-wrap: wrap;
       @media (max-width: 660px) {
         margin-top: 20px;
         flex-direction: column;

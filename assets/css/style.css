@@ -677,6 +677,10 @@
     padding: 80px 0;
   }
 }
+.blocks.plastikcard .section_title {
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 768px) {
   .blocks.plastikcard .section_title {
     font-size: 32px;
@@ -704,6 +708,14 @@
     gap: 40px 0;
   }
 }
+.blocks .trip_items.foor {
+  padding-bottom: 50px;
+}
+@media (max-width: 556px) {
+  .blocks .trip_items.foor {
+    padding-bottom: 30px;
+  }
+}
 .blocks .trip_items .trip_item {
   width: calc(33.33% - 20px);
   border-radius: 40px;
@@ -711,6 +723,15 @@
   backdrop-filter: blur(15px);
   padding: 47px 61px 45px 62px;
   gap: 30px;
+  transition: all 0.2s linear;
+}
+.blocks .trip_items .trip_item img {
+  max-width: 100%;
+}
+.blocks .trip_items .trip_item:hover {
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
 }
 @media (max-width: 1200px) {
   .blocks .trip_items .trip_item {
@@ -740,6 +761,139 @@
 @media (max-width: 1200px) {
   .blocks .trip_items .trip_item span {
     font-size: 18px;
+  }
+}
+.blocks .trip_items.foor .trip_item {
+  width: calc(25% - 20px);
+  padding: 49px 34px 45px;
+}
+@media (max-width: 1200px) {
+  .blocks .trip_items.foor .trip_item {
+    padding: 30px 25px;
+  }
+}
+@media (max-width: 1024px) {
+  .blocks .trip_items.foor .trip_item {
+    width: calc(33.33% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .blocks .trip_items.foor .trip_item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 556px) {
+  .blocks .trip_items.foor .trip_item {
+    width: 100%;
+  }
+}
+.blocks .covered_sm_items {
+  width: calc(57% - 20px);
+  gap: 40px 0;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .blocks .covered_sm_items {
+    width: 100%;
+  }
+}
+@media (max-width: 556px) {
+  .blocks .covered_sm_items {
+    gap: 20px;
+  }
+}
+.blocks .covered_items {
+  padding-top: 110px;
+  gap: 40px 0;
+}
+@media (max-width: 1024px) {
+  .blocks .covered_items {
+    flex-direction: column;
+    padding-top: 80px;
+  }
+}
+@media (max-width: 556px) {
+  .blocks .covered_items {
+    gap: 20px;
+    padding-top: 60px;
+  }
+}
+.blocks .covered_items .covered_item {
+  border-radius: 40px;
+  border: 1px solid #6e44d9;
+  backdrop-filter: blur(15px);
+  gap: 17px;
+  padding: 23px 40px;
+  transition: all 0.2s linear;
+}
+@media (max-width: 556px) {
+  .blocks .covered_items .covered_item {
+    padding: 30px 40px 34px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 556px) {
+  .blocks .covered_items .covered_item img {
+    max-width: 152px;
+  }
+}
+.blocks .covered_items .covered_item .covered_item_title {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+.blocks .covered_items .covered_item p {
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  margin-top: 24px;
+}
+@media (max-width: 556px) {
+  .blocks .covered_items .covered_item p {
+    font-size: 16px;
+    line-height: normal;
+    margin-top: 20px;
+  }
+}
+.blocks .covered_items .covered_item:hover {
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+}
+.blocks .covered_items .covered_item.column {
+  width: calc(43% - 20px);
+  padding: 52px 40px 45px;
+}
+@media (max-width: 1024px) {
+  .blocks .covered_items .covered_item.column {
+    width: 100%;
+  }
+}
+.blocks .covered_items .covered_item.column .covered_item_title {
+  color: #fff;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+@media (max-width: 556px) {
+  .blocks .covered_items .covered_item.column .covered_item_title {
+    font-size: 28px;
+  }
+}
+.blocks .covered_items .covered_item.column img {
+  max-width: 237px;
+}
+@media (max-width: 556px) {
+  .blocks .covered_items .covered_item.column img {
+    max-width: 152px;
   }
 }
 .blocks .block_progress {
@@ -1115,16 +1269,6 @@
     font-size: 24px;
   }
 }
-.price_card .price_text .price_value {
-  border-radius: 50px;
-  background: radial-gradient(74.35% 74.35% at 75.62% 21.87%, #cf06f2 0%, #c705ef 5%, #8d02dc 50%, #6900d0 83%, #5c00cc 100%);
-  padding: 5px 10px;
-}
-@media (max-width: 768px) {
-  .price_card .price_text .price_value {
-    display: inline-block;
-  }
-}
 .price_card p {
   color: #fff;
   font-size: 24px;
@@ -1150,9 +1294,67 @@
   font-weight: 350;
 }
 
+.price_value {
+  border-radius: 50px;
+  background: radial-gradient(74.35% 74.35% at 75.62% 21.87%, #cf06f2 0%, #c705ef 5%, #8d02dc 50%, #6900d0 83%, #5c00cc 100%);
+  padding: 5px 10px;
+  color: #fff;
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+@media (max-width: 768px) {
+  .price_value {
+    display: inline-block;
+  }
+}
+@media (max-width: 556px) {
+  .price_value {
+    color: #fff;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+  }
+}
+
 .card {
   position: relative;
   z-index: 2;
+}
+.card.insuranse {
+  padding-top: 110px;
+}
+@media (max-width: 1024px) {
+  .card.insuranse {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .card.insuranse {
+    padding-top: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .card.insuranse .check_content_items {
+    flex-direction: row;
+    gap: 16px 0;
+  }
+}
+@media (max-width: 768px) {
+  .card.insuranse .check_content_item {
+    width: calc(50% - 5px);
+  }
+}
+@media (max-width: 768px) {
+  .card.insuranse .check_content_item p {
+    font-size: 15px;
+  }
 }
 .card_items {
   margin-top: 50px;
@@ -1233,6 +1435,7 @@
 .card .check_content_items {
   margin-top: 30px;
   gap: 24px;
+  flex-wrap: wrap;
 }
 @media (max-width: 660px) {
   .card .check_content_items {
@@ -1492,6 +1695,152 @@
 }
 .modal_links ul a:hover {
   border-color: #0a2540;
+}
+
+.travel_insurance {
+  padding-top: 110px;
+}
+@media (max-width: 1024px) {
+  .travel_insurance {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .travel_insurance {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 556px) {
+  .travel_insurance .section_title {
+    font-size: 28px;
+  }
+}
+.travel_insurance_cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .travel_insurance_cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  .travel_insurance_cards {
+    margin-top: 30px;
+  }
+}
+.travel_insurance_card {
+  display: flex;
+  padding: 52px 40px 59px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  border-radius: 40px;
+  border: 1px solid #6e44d9;
+  backdrop-filter: blur(15px);
+  width: calc(33.33% - 20px);
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transition: background 0.2s linear;
+}
+@media (max-width: 1024px) {
+  .travel_insurance_card {
+    width: calc(33.33% - 14px);
+    padding: 42px 34px 45px 34px;
+  }
+}
+@media (max-width: 768px) {
+  .travel_insurance_card {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 556px) {
+  .travel_insurance_card {
+    width: 100%;
+    padding: 52px 40px 59px 40px;
+  }
+}
+.travel_insurance_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(74.35% 74.35% at 75.62% 21.87%, #cf06f2 0%, #c705ef 5%, #8d02dc 50%, #6900d0 83%, #5c00cc 100%);
+  opacity: 0;
+  transition: opacity 0.4s linear;
+  z-index: 0;
+}
+.travel_insurance_card:hover::before {
+  opacity: 1;
+}
+.travel_insurance_card * {
+  position: relative;
+  z-index: 1;
+}
+.travel_insurance_card_number {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(74.35% 74.35% at 75.62% 21.87%, #cf06f2 0%, #c705ef 5%, #8d02dc 50%, #6900d0 83%, #5c00cc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 43px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+.travel_insurance_card_title {
+  color: #fff;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+@media (max-width: 556px) {
+  .travel_insurance_card_title {
+    font-size: 24px;
+  }
+}
+.travel_insurance_card p {
+  color: #fff;
+  text-align: center;
+  font-family: "Segoe UI";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  padding-top: 18px;
+}
+@media (max-width: 1024px) {
+  .travel_insurance_card p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 556px) {
+  .travel_insurance_card p {
+    font-size: 19px;
+  }
+}
+.travel_insurance_button {
+  margin-top: 50px;
+}
+@media (max-width: 556px) {
+  .travel_insurance_button {
+    margin-top: 30px;
+  }
 }
 
 body {

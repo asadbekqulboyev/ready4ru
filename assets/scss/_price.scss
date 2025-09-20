@@ -9,7 +9,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
- 
+
   &_card {
     padding: 52px 40px 59px 40px;
     border-radius: 40px;
@@ -45,21 +45,6 @@
       @media (max-width: 343px) {
         font-size: 24px;
       }
-      .price_value {
-        border-radius: 50px;
-        background: radial-gradient(
-          74.35% 74.35% at 75.62% 21.87%,
-          #cf06f2 0%,
-          #c705ef 5%,
-          #8d02dc 50%,
-          #6900d0 83%,
-          #5c00cc 100%
-        );
-        padding: 5px 10px;
-        @media (max-width: 768px) {
-          display: inline-block;
-        }
-      }
     }
     p {
       color: #fff;
@@ -84,5 +69,37 @@
       margin-top: 28px;
       font-weight: 350;
     }
+  }
+}
+
+.price_value {
+  border-radius: 50px;
+  background: radial-gradient(
+    74.35% 74.35% at 75.62% 21.87%,
+    #cf06f2 0%,
+    #c705ef 5%,
+    #8d02dc 50%,
+    #6900d0 83%,
+    #5c00cc 100%
+  );
+  padding: 5px 10px;
+  color: #fff;
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+  @media (max-width: 768px) {
+    display: inline-block;
+  }
+  @media (max-width: 556px) {
+    color: #fff;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; 
   }
 }
