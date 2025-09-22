@@ -692,6 +692,11 @@
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .blocks.index {
+    padding-top: 60px;
+  }
+}
 .blocks .trip_items {
   padding-top: 50px;
   padding-bottom: 110px;
@@ -1227,6 +1232,12 @@
   .price {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .price.card_price {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 .price_card {

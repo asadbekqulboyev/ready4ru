@@ -33,6 +33,11 @@
       }
     }
   }
+  &.index {
+    @media (max-width: 768px) {
+      padding-top: 60px;
+    }
+  }
   .trip_items {
     padding-top: 50px;
     padding-bottom: 110px;
