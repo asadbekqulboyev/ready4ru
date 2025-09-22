@@ -70,6 +70,21 @@
       font-weight: 350;
     }
   }
+  .stop {
+    margin-top: 28px;
+    gap: 13px;
+  }
+  .bg_opacity {
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    padding: 22px 33px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+  }
 }
 
 .price_value {
@@ -90,6 +105,21 @@
   font-style: normal;
   font-weight: 700;
   line-height: 45px;
+  h2 {
+    @media (max-width: 556px) {
+      font-size: 22px;
+      text-align: left;
+    }
+  }
+  &.big {
+    padding: 23px 50px;
+    display: inline-block;
+    border-radius: 100px;
+    @media (max-width: 556px) {
+      padding: 23px 21px;
+      border-radius: 35px;
+    }
+  }
   @media (max-width: 768px) {
     display: inline-block;
   }
@@ -100,6 +130,6 @@
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px; 
+    line-height: 30px;
   }
 }

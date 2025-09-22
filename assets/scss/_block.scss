@@ -50,6 +50,9 @@
         padding-bottom: 30px;
       }
     }
+    &.vehical_items {
+      padding-bottom: 0;
+    }
 
     .trip_item {
       width: calc(33.33% - 20px);

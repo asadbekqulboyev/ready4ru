@@ -332,3 +332,59 @@ li {
   font-weight: 700;
   line-height: 45px;
 }
+.text_center {
+  text-align: center;
+}
+.vehical_type {
+  padding-top: 110px;
+  @media (max-width: 1024px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0px;
+  }
+  &_lineas {
+    margin-top: 40px;
+    @media (max-width: 768px) {
+      width: 80px;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    img {
+      object-fit: contain;
+      max-width: 65%;
+
+      @media (max-width: 768px) {
+        max-width: auto;
+        width: auto;
+        height: 144px;
+        object-fit: cover;
+      }
+    }
+  }
+  .travel_insurance_cards {
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid #6e44d9;
+    background: rgba(26, 9, 69, 0.21);
+    box-shadow: 0 4px 79px 0 rgba(0, 0, 0, 0.03);
+    @media (max-width: 1024px) {
+      padding: 33px;
+    }
+    @media (max-width: 768px) {
+      padding: 30px;
+      margin-top: 40px;
+    }
+  }
+  .section_title {
+    @media (max-width: 556px) {
+      font-size: 28px;
+    }
+  }
+}
+.greencard {
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+}
