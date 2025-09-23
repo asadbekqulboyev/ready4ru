@@ -117,6 +117,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  $(".policy_date").datepicker({
+    dateFormat: "yy-mm-dd", // 2022-12-31 format
+  });
   function handleFileInput(fileInput) {
     $(fileInput).on("change", function () {
       const files = this.files;
