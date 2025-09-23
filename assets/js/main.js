@@ -77,76 +77,96 @@ $(window).scroll(function () {
   }
 });
 $(document).ready(function () {
-  function showStep(step) {
-    $(".step").removeClass("active");
-    $('.step[data-step="' + step + '"]').addClass("active");
-  }
+  // Next bosilganda
+  $(document).on("click", ".btn_next, .option", function () {
+    let nextStep = $(this).data("next");
+    if (!nextStep) return;
 
-  // next bosilganda
-  $(document).on("click", "[data-next]", function () {
-    let step = $(this).data("next");
-    showStep(step);
+    let modal = $(this).closest(".modal"); // faqat shu modal ichida ishlaydi
+    let steps = modal.find(".step");
+
+    steps.removeClass("active");
+    modal.find(`.step[data-step="${nextStep}"]`).addClass("active");
   });
 
-  // back bosilganda
-  $(".steps_back").on("click", function () {
-    let current = $(".step.active").data("step");
-    if (current > 1) {
-      showStep(current - 1);
+  // Back bosilganda
+  $(document).on("click", ".steps_back", function () {
+    let modal = $(this).closest(".modal");
+    let activeStep = modal.find(".step.active");
+    let currentStep = parseInt(activeStep.data("step"));
+
+    if (currentStep > 1) {
+      activeStep.removeClass("active");
+      modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
     }
   });
 
-  // exit bosilganda
-  $(".modal_exit").on("click", function () {
-    $(".modal").fadeOut();
+  // Exit bosilganda
+  $(document).on("click", ".modal_exit", function () {
+    let modal = $(this).closest(".modal");
+    modal.hide();
+    modal.find(".step").removeClass("active");
+    modal.find('.step[data-step="1"]').addClass("active"); // 1-stepga qaytaradi
+  });
+
+  // Modalni ochish uchun tugma (misol uchun)
+  $("[data-modal]").on("click", function () {
+    let target = $(this).data("modal"); // masalan: data-modal="modal_register_b"
+    $("#" + target).show();
   });
 });
+
 $(document).ready(function () {
-  const fileInput = $("#fileInput");
+  function handleFileInput(fileInput) {
+    $(fileInput).on("change", function () {
+      const files = this.files;
+      const uploadArea = $(this).closest(".upload-area"); // faqat shu input konteyneri
 
-  fileInput.on("change", function () {
-    const files = this.files;
+      $.each(files, function (i, file) {
+        if (!file.type.startsWith("image/")) return;
 
-    $.each(files, function (i, file) {
-      if (!file.type.startsWith("image/")) return;
+        const preview = $(`
+          <div class="file-preview">
+            <div class="loading"></div>
+            <img src="" alt="Preview">
+            <button class="remove-btn">&times;</button>
+          </div>
+        `);
 
-      // Preview box yaratamiz
-      const preview = $(`
-        <div class="file-preview">
-          <div class="loading"></div>
-          <img src="" alt="Preview">
-          <button class="remove-btn">&times;</button>
-        </div>
-      `);
+        uploadArea.find(".upload-box").before(preview);
 
-      // upload-box oldidan qo‘shamiz
-      $(".upload-box").before(preview);
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.fadeIn();
+          preview.find(".loading").fadeIn();
 
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        preview.fadeIn(); // preview boxni ko‘rsatamiz
-        preview.find(".loading").fadeIn(); // loadingni ko‘rsatamiz
+          setTimeout(() => {
+            preview.find(".loading").hide();
+            preview.find("img").attr("src", e.target.result).fadeIn();
+            preview.find(".remove-btn").fadeIn();
+          }, 1000);
+        };
+        reader.readAsDataURL(file);
 
-        // 1s loading, keyin rasm
-        setTimeout(() => {
-          preview.find(".loading").hide();
-          preview.find("img").attr("src", e.target.result).fadeIn();
-          preview.find(".remove-btn").fadeIn();
-        }, 1000);
-      };
-      reader.readAsDataURL(file);
-
-      // ❌ remove bosilganda previewni o‘chirish
-      preview.find(".remove-btn").on("click", function () {
-        preview.remove();
+        preview.find(".remove-btn").on("click", function () {
+          preview.remove();
+        });
       });
-    });
 
-    // Fayl inputni reset qilish
-    fileInput.val("");
-  });
+      this.value = ""; // fayl input reset
+    });
+  }
+
+  // Ikkalasiga ham ishlatamiz
+  handleFileInput("#fileInput1");
+  handleFileInput("#fileInput2");
 });
+
 $(".open_register").click(function (e) {
   e.preventDefault();
-  $("#modal_register").fadeIn(200);
+  $("#modal_register_b").fadeIn(200);
+});
+$(".open_register_ac").click(function (e) {
+  e.preventDefault();
+  $("#modal_register_ac").fadeIn(200);
 });
