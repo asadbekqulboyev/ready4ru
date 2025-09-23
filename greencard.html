@@ -26,8 +26,8 @@
                             <li><a href="#">Contacts</a></li>
                         </ul>
                         <div class="buttonlist flex a_center">
-                            <a href="#" class="button ">Registration</a>
-                            <a href="#" class="button light flex a_center">
+                            <a href="#" class="button open_register">Registration</a>
+                            <a href="#" class="button light flex a_center open_register">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -605,7 +605,279 @@
             </div>
         </div>
     </div>
+    <div class="modal" id="modal_register">
+        <div class="modal_content">
+            <!-- Exit va back -->
+            <div class="modal_header flex between a_center">
+                <div class="steps_back"><img src="assets/images/left.svg" alt=""><span>Back</span></div>
+                <div class="modal_exit"><span>&times;</span></div>
+            </div>
 
+            <!-- Step container -->
+            <div class="modal_steps">
+                <!-- Step 1 -->
+                <div class="step active" data-step="1">
+                    <span class="step_number">Step 1</span>
+                    <h2 class="modal_title">Vehicle owner</h2>
+                    <p class="step_text">Choose the owner</p>
+                    <div class="options flex center">
+
+                        <div class="option" data-next="2">
+                            <img src="assets/images/user.svg" alt="">
+                            <p>Owner listed on the registration Individual</p>
+                        </div>
+                        <div class="option" data-next="2">
+                            <img src="assets/images/worker.svg" alt="">
+                            <p>Owner listed on the registration Company / legal entity</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step" data-step="2">
+                    <span class="step_number">Step 2</span>
+                    <h2 class="modal_title">Engine power</h2>
+                    <p class="step_text">Choose the engine power in kilowatts (kW). It’s usually shown in the vehicle
+                        registration, field P.2.</p>
+                    <div class="options grid_2">
+                        <div class="option" data-next="3">
+                            <div class="option_bold">Up to 51</div>
+                            <p>Up to 51.48 kW</p>
+                        </div>
+                        <div class="option" data-next="3">
+                            <div class="option_bold">51-73</div>
+                            <p>51.48–73.55 kW</p>
+                        </div>
+                        <div class="option" data-next="3">
+                            <div class="option_bold">73-88</div>
+                            <p>73.55–88.26 kW</p>
+                        </div>
+                        <div class="option" data-next="3">
+                            <div class="option_bold">88-110</div>
+                            <p>88.26–110.33 kW</p>
+                        </div>
+                        <div class="option" data-next="3">
+                            <div class="option_bold">110+</div>
+                            <p>Over 110.33 kW</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="step" data-step="3">
+                    <span class="step_number">Step 3</span>
+                    <h2 class="modal_title">---- kW</h2>
+                    <div class="flex dates between">
+                        <label class="flex column">
+                            <span>Policy start date</span>
+                            <input type="date" value="2022-12-31">
+                            <img src="assets/images/calendar.svg" alt="">
+                        </label>
+                        <label class="flex column">
+                            <span>Duration</span>
+                            <select>
+                                <option>15 days</option>
+                                <option>30 days</option>
+                                <option>90 days</option>
+                            </select>
+                            <img src="assets/images/arrws.svg" alt="">
+                        </label>
+                    </div>
+                    <div class="flex btn_box a_center">
+                        <button class="btn_next button blue" data-next="4">Next</button>
+                        <div class="modal_prices"><b>Final price: </b> <span> 4061 ₽</span></div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="step" data-step="4">
+                    <span class="step_number">Step 4</span>
+                    <h2 class="modal_title">Owner details</h2>
+                    <p class="step_text">The policy lists only the vehicle owner. There’s no limit on the number of
+                        drivers. The liability of anyone driving the vehicle is insured under the policy.</p>
+                    <div class="flex dates between">
+                        <label class="flex column">
+                            <span>Your e-mail</span>
+                            <input type="email" placeholder="example@gmail.com">
+                        </label>
+                        <label class="flex column">
+                            <span>Phone number</span>
+                            <input type="tel" placeholder="+371 67 81 53 33">
+                        </label>
+                    </div>
+                    <div class="switch_wrapper flex a_end">
+                        <div class="flex column">
+                            <span class="switch_title">Add trailer</span>
+                            <label class="switch_label">
+                                <input type="checkbox" class="switch_input">
+                                <span class="switch_slider"></span>
+                            </label>
+                        </div>
+                        <span class="switch_desc">Enable if the vehicle is used with a trailer.</span>
+                    </div>
+                    <div class="upload-wrapper">
+                        <h3>Attach a photo or scan of the vehicle registration certificate and the policyholder’s
+                            passport.</h3>
+
+                        <div class="upload-area" id="uploadArea">
+                            <!-- previewlar shu yerga dinamik qo‘shiladi -->
+
+                            <label class="upload-box">
+                                <input type="file" id="fileInput" accept="image/*" multiple />
+                                <div class="upload-content flex column a_center center">
+                                    <img src="assets/images/upload.svg" alt="">
+                                    <span>Upload file</span>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="note">These documents are required by the insurer.</p>
+                    </div>
+                    <button class="btn_next button blue" data-next="5">Next</button>
+                </div>
+                <!-- Step 5 -->
+                <div class="step" data-step="5">
+                    <h2 class="modal_title">Summary</h2>
+                    <div class="modal_prices"><b>Final price:</b> <span>4061 ₽</span></div>
+                    <div class="modal_policy flex column ">
+                        <div class="modal_policy_title">Policy order details</div>
+                        <p>* Please check that all data is correct</p>
+                    </div>
+                    <div class="summary_box">
+                        <ul>
+                            <li>
+                                <p>Vehicle type</p><span>Passenger car (Category B)</span>
+                            </li>
+                            <li>
+                                <p>Vehicle owner</p><span>Individual</span>
+                            </li>
+                            <li>
+                                <p>Engine power </p><span>51.48–73.55 kW</span>
+                            </li>
+                            <li>
+                                <p>Policy start date </p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>Duration </p><span>15 days</span>
+                            </li>
+                            <li>
+                                <p>Owner’s full name or company name</p><span>-</span>
+                            </li>
+                            <li>
+                                <p>Date of birth or company tax ID </p><span>51.48–73.55 kW</span>
+                            </li>
+                            <li>
+                                <p>Owner’s passport No. or company <br> registration certificate No.</p><span>EA
+                                    165853</span>
+                            </li>
+                            <li>
+                                <p>Passport issue date / company registration
+                                    issue date </p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>Contact phone</p><span>+375333359564</span>
+                            </li>
+                            <li>
+                                <p>Make (brand)</p><span>Lada</span>
+                            </li>
+                            <li>
+                                <p>Model</p><span>Granta</span>
+                            </li>
+                            <li>
+                                <p>Year</p><span>2025</span>
+                            </li>
+                            <li>
+                                <p>Registration plate number</p><span>AK4733</span>
+                            </li>
+                            <li>
+                                <p>VIN</p><span>MD568695848382848</span>
+                            </li>
+                            <li>
+                                <p>Engine power</p><span>150</span>
+                            </li>
+                            <li>
+                                <p>Country of registration</p><span>Belarus</span>
+                            </li>
+                            <li>
+                                <p>Registration certificate No.</p><span>EA265859568</span>
+                            </li>
+                            <li>
+                                <p>Registration certificate issue date</p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>No/Yes</p><span>03.09.2025</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal_checkbox_content">
+                        <label class="flex a_start">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <div class="custom-checkbox"></div>
+                                <span></span>
+                            </div>
+                            <p>
+                                I confirm that I have read and agree that the policy’s territory of coverage is the
+                                Russian Federation, and that the policy cannot be canceled and is non-refundable, in
+                                whole or in part, either before or after the start date.
+                            </p>
+                        </label>
+                        <label class="flex a_start">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <div class="custom-checkbox"></div>
+                                <span></span>
+                            </div>
+                            <p>
+                                I agree to the policy price and understand that policies are submitted for processing on
+                                business days, Monday–Friday 10:00–18:00 (Moscow time). Orders received outside these
+                                hours or on weekends will be submitted on the next business day.
+                            </p>
+                        </label>
+                    </div>
+                    <div class="flex betwen modal_footer">
+
+                        <button class="btn_next button blue" data-next="6">Proceed to payment</button>
+                        <div class="button light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.2407 6.36978L17.2857 5.32779C16.9165 4.92498 16.2924 4.89305 15.884 5.25609L14.3213 6.64547L16.6194 9.18253L18.1714 7.78964C18.5854 7.41803 18.6166 6.77993 18.2407 6.36978ZM5.5 14.4879L13.2002 7.64215L15.5031 10.1844L7.90674 17.0022H5.5V14.4879ZM19.3465 5.3563L18.3915 4.31431C17.4686 3.30729 15.9083 3.22747 14.8874 4.13506L4.33557 13.5161C4.12212 13.7058 4 13.9778 4 14.2634V17.5022C4 18.0545 4.44772 18.5022 5 18.5022H8.09822C8.34478 18.5022 8.58266 18.4111 8.76616 18.2464L19.1733 8.90597C20.2084 7.97694 20.2863 6.38169 19.3465 5.3563ZM20 19.9996H4V21.4996H20V19.9996Z"
+                                    fill="#6E44D9" />
+                            </svg>
+                            <span>Edit details</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 6 -->
+                <div class="step" data-step="6">
+
+                    <div class="flex center a_center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="94" height="93" viewBox="0 0 94 93" fill="none">
+                            <g clip-path="url(#clip0_696_2278)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.60746 42.4462L23.7798 61.643L62.2485 23.1255L66.356 27.2381L25.8335 67.812C24.6993 68.9478 22.8603 68.9478 21.7261 67.812L0.5 46.5592L4.60746 42.4462ZM50.9056 61.6422L44.9195 55.6445L40.7977 59.7427L48.8503 67.8112C49.3951 68.3568 50.1337 68.6637 50.9044 68.6637C51.6748 68.6637 52.4138 68.3576 52.9586 67.812L93.481 27.2381L89.3735 23.1255L50.9056 61.6422Z"
+                                    fill="url(#paint0_radial_696_2278)" />
+                            </g>
+                            <defs>
+                                <radialGradient id="paint0_radial_696_2278" cx="0" cy="0" r="1"
+                                    gradientTransform="matrix(4.02748 33.7987 -69.0109 1.9725 70.8096 33.0835)"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#CF06F2" />
+                                    <stop offset="0.05" stop-color="#C705EF" />
+                                    <stop offset="0.5" stop-color="#8D02DC" />
+                                    <stop offset="0.83" stop-color="#6900D0" />
+                                    <stop offset="1" stop-color="#5C00CC" />
+                                </radialGradient>
+                                <clipPath id="clip0_696_2278">
+                                    <rect width="93" height="93" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 class="succes_text">Your application has been received and assigned to a manager.</h2>
+                    <p class="succes_desc">We will contact you shortly.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://attolloassistance.com/widget/solid/solid_widget.js"></script>

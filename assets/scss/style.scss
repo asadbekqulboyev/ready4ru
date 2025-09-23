@@ -387,4 +387,10 @@ li {
   @media (max-width: 768px) {
     margin-top: 60px;
   }
+  p {
+    margin-top: 27px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
 }
