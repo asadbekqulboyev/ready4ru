@@ -639,23 +639,23 @@
                     <p class="step_text">Choose the engine power in kilowatts (kW). It’s usually shown in the vehicle
                         registration, field P.2.</p>
                     <div class="options grid_2">
-                        <div class="option" data-next="3">
+                        <div class="option" data-next="3" data-value="51kW">
                             <div class="option_bold">Up to 51</div>
                             <p>Up to 51.48 kW</p>
                         </div>
-                        <div class="option" data-next="3">
+                        <div class="option" data-next="3" data-value="51-73kw">
                             <div class="option_bold">51-73</div>
                             <p>51.48–73.55 kW</p>
                         </div>
-                        <div class="option" data-next="3">
+                        <div class="option" data-next="3" data-value="73-88kw">
                             <div class="option_bold">73-88</div>
                             <p>73.55–88.26 kW</p>
                         </div>
-                        <div class="option" data-next="3">
+                        <div class="option" data-next="3" data-value="88-110kw">
                             <div class="option_bold">88-110</div>
                             <p>88.26–110.33 kW</p>
                         </div>
-                        <div class="option" data-next="3">
+                        <div class="option" data-next="3" data-value="110+kw">
                             <div class="option_bold">110+</div>
                             <p>Over 110.33 kW</p>
                         </div>
@@ -664,7 +664,7 @@
                 <!-- Step 3 -->
                 <div class="step" data-step="3">
                     <span class="step_number">Step 3</span>
-                    <h2 class="modal_title">---- kW</h2>
+                    <h2 class="modal_title title_text">---- kW</h2>
                     <div class="flex dates between">
                         <label class="flex column">
                             <span>Policy start date</span>
@@ -732,7 +732,7 @@
                     <button class="btn_next button blue" data-next="5">Next</button>
                 </div>
                 <!-- Step 5 -->
-                <div class="step" data-step="5">
+                <div class="step step5" data-step="5">
                     <h2 class="modal_title">Summary</h2>
                     <div class="modal_prices"><b>Final price:</b> <span>4061 ₽</span></div>
                     <div class="modal_policy flex column ">
@@ -808,7 +808,7 @@
                     <div class="modal_checkbox_content">
                         <label class="flex a_start">
                             <div class="checkbox-wrapper">
-                                <input type="checkbox">
+                                <input type="checkbox" name="policy" required checked>
                                 <div class="custom-checkbox"></div>
                                 <span></span>
                             </div>
@@ -820,7 +820,7 @@
                         </label>
                         <label class="flex a_start">
                             <div class="checkbox-wrapper">
-                                <input type="checkbox">
+                                <input type="checkbox" name="pol" required checked>
                                 <div class="custom-checkbox"></div>
                                 <span></span>
                             </div>
@@ -833,7 +833,7 @@
                     </div>
                     <div class="flex betwen modal_footer">
 
-                        <button class="btn_next button blue" data-next="6">Proceed to payment</button>
+                        <button class="btn_next button blue" type="submit" data-next="6">Proceed to payment</button>
                         <div class="button light">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
                                 fill="none">

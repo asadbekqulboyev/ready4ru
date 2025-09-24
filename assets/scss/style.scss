@@ -394,3 +394,10 @@ li {
     }
   }
 }
+.btn_next.disabled{
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  user-select: none;
+  -webkit-user-select: none;
+}

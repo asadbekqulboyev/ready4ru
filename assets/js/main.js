@@ -85,6 +85,22 @@ $(document).ready(function () {
     let modal = $(this).closest(".modal"); // faqat shu modal ichida ishlaydi
     let steps = modal.find(".step");
 
+    // Step 5dagi Next tugma bosilganda checkboxlarni tekshirish
+    if ($(this).closest(".step").data("step") == 5) {
+      let allChecked = $(".step5 input[type='checkbox'][required]")
+        .toArray()
+        .every(function (cb) {
+          return $(cb).is(":checked");
+        });
+
+      if (!allChecked) {
+        $(".step5  .btn_next").addClass("disabled");
+        return;
+      } else {
+        $(".step5  .btn_next").removeClass("disabled");
+      }
+    }
+
     steps.removeClass("active");
     modal.find(`.step[data-step="${nextStep}"]`).addClass("active");
   });
@@ -99,6 +115,11 @@ $(document).ready(function () {
       activeStep.removeClass("active");
       modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
     }
+  });
+
+  $(".grid_2 .option").click(function () {
+    $(this).attr("data-value");
+    $(".title_text").text($(this).attr("data-value"));
   });
 
   // Exit bosilganda
@@ -172,4 +193,25 @@ $(".open_register").click(function (e) {
 $(".open_register_ac").click(function (e) {
   e.preventDefault();
   $("#modal_register_ac").fadeIn(200);
+});
+$(document).ready(function () {
+  $(".step5  .btn_next").on("click", function (e) {
+    e.preventDefault(); // Default tugma ishini to'xtatamiz
+
+    // 5-step ichidagi barcha required checkboxlarni tekshiramiz
+    var allChecked = $(".step5 input[type='checkbox'][required]")
+      .toArray()
+      .every(function (cb) {
+        return $(cb).is(":checked");
+      });
+
+    if (allChecked) {
+      // Agar barcha checkboxlar checked bo'lsa, 6-qadamga o'tamiz
+      $(".step").hide(); // Hamma steplarni yashiramiz
+      $(".step[data-step='6']").show(); // 6-stepni ko'rsatamiz
+    } else {
+      $(".step5  .btn_next").addClass("disabled");
+      return;
+    }
+  });
 });
