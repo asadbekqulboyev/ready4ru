@@ -77,91 +77,105 @@ $(window).scroll(function () {
   }
 });
 $(document).ready(function () {
-  // Next bosilganda
-// Next va Option bosilganda
-// Next va Option va Edit bosilganda
-$(document).on("click", ".btn_next, .option, .modal_edit1", function () {
-  let nextStep = $(this).data("next");
-  if (!nextStep) return;
+  $(document).on(
+    "click",
+    ".btn_next, .option, .modal_edit1, .modal_edit2",
+    function () {
+      let nextStep = $(this).data("next");
+      if (!nextStep) return;
 
-  let modal = $(this).closest(".modal"); // faqat shu modal ichida ishlaydi
-  let steps = modal.find(".step");
+      let modal = $(this).closest(".modal");
+      let steps = modal.find(".step");
+      let currentStep = $(this).closest(".step").data("step");
+      let valid = true;
 
-  // Step 5 da faqat Next tugma bosilganda checkboxlarni tekshirish
-  if (
-    $(this).closest(".step").data("step") == 5 &&
-    $(this).hasClass("btn_next")
-  ) {
-    let allChecked = $(".step5 input[type='checkbox'][required]")
-      .toArray()
-      .every(function (cb) {
-        return $(cb).is(":checked");
+      modal.find("input").css({
+        "border-color": "#6e44d9",
+        outline: "none",
       });
 
-    if (!allChecked) {
-      $(".step5 .btn_next").addClass("disabled");
-      return;
-    } else {
-      $(".step5 .btn_next").removeClass("disabled");
+      let inputs = modal.find(
+        `.step[data-step="${currentStep}"] input[type='email'], 
+         .step[data-step="${currentStep}"] input[type='tel']`
+      );
+      inputs.each(function () {
+        if ($(this).val().trim() === "") {
+          $(this).css("border-color", "red").focus();
+          valid = false;
+          return false;
+        }
+      });
+
+      // 🔹 switch_input klasini hisobga olmaymiz
+      let checkboxes = modal
+        .find(`.step[data-step="${currentStep}"] input[type='checkbox']`)
+        .not(".switch_input");
+
+      if (checkboxes.length > 0) {
+        let allChecked = true;
+        checkboxes.each(function () {
+          if (!$(this).is(":checked")) {
+            $(this).css("outline", "2px solid red");
+            allChecked = false;
+          } else {
+            $(this).css("outline", "none");
+          }
+        });
+        if (!allChecked) valid = false;
+      }
+
+      if (!valid) return;
+
+      steps.removeClass("active");
+      modal.find(`.step[data-step="${nextStep}"]`).addClass("active");
     }
-  }
+  );
 
-  // Step almashtirish
-  steps.removeClass("active");
-  modal.find(`.step[data-step="${nextStep}"]`).addClass("active");
-});
+  $(document).on("click", ".steps_back", function () {
+    let modal = $(this).closest(".modal");
+    let activeStep = modal.find(".step.active");
+    let currentStep = parseInt(activeStep.data("step"));
 
-// Back bosilganda
-$(document).on("click", ".steps_back", function () {
-  let modal = $(this).closest(".modal");
-  let activeStep = modal.find(".step.active");
-  let currentStep = parseInt(activeStep.data("step"));
-
-  if (currentStep > 1) {
-    activeStep.removeClass("active");
-    modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
-  }
-});
-// Back bosilganda
-$(document).on("click", ".steps_back", function () {
-  let modal = $(this).closest(".modal");
-  let activeStep = modal.find(".step.active");
-  let currentStep = parseInt(activeStep.data("step"));
-
-  if (currentStep > 1) {
-    activeStep.removeClass("active");
-    modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
-  }
-});
+    if (currentStep > 1) {
+      activeStep.removeClass("active");
+      modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
+    }
+  });
 
   $(".grid_2 .option").click(function () {
-    $(this).attr("data-value");
     $(".title_text").text($(this).attr("data-value"));
   });
 
-  // Exit bosilganda
   $(document).on("click", ".modal_exit", function () {
     let modal = $(this).closest(".modal");
+
     modal.hide();
+
+    modal.find("input").val("");
+    modal.find("input[type='checkbox']").prop("checked", false);
+    modal.find("input").css({
+      "border-color": "#6e44d9",
+      outline: "none",
+    });
+
     modal.find(".step").removeClass("active");
-    modal.find('.step[data-step="1"]').addClass("active"); // 1-stepga qaytaradi
+    modal.find('.step[data-step="1"]').addClass("active");
   });
 
-  // Modalni ochish uchun tugma (misol uchun)
   $("[data-modal]").on("click", function () {
-    let target = $(this).data("modal"); // masalan: data-modal="modal_register_b"
+    let target = $(this).data("modal");
     $("#" + target).show();
   });
 });
 
 $(document).ready(function () {
   $(".policy_date").datepicker({
-    dateFormat: "yy-mm-dd", // 2022-12-31 format
+    dateFormat: "yy-mm-dd",
   });
   function handleFileInput(fileInput) {
     $(fileInput).on("change", function () {
       const files = this.files;
-      const uploadArea = $(this).closest(".upload-area"); // faqat shu input konteyneri
+      const uploadArea = $(this).closest(".upload-area");
 
       $.each(files, function (i, file) {
         if (!file.type.startsWith("image/")) return;

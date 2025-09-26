@@ -1869,6 +1869,9 @@
   line-height: 24px;
   height: 48px;
 }
+.modal#modal_register_b .dates label input.input_error, .modal#modal_register_ac .dates label input.input_error {
+  border-color: red !important;
+}
 .modal#modal_register_b .dates label img, .modal#modal_register_ac .dates label img {
   position: absolute;
   top: 31px;
@@ -3081,4 +3084,8 @@ li {
   cursor: not-allowed;
   user-select: none;
   -webkit-user-select: none;
+}
+
+.input_error {
+  border: 2px solid red !important;
 }/*# sourceMappingURL=style.css.map */
