@@ -78,44 +78,61 @@ $(window).scroll(function () {
 });
 $(document).ready(function () {
   // Next bosilganda
-  $(document).on("click", ".btn_next, .option", function () {
-    let nextStep = $(this).data("next");
-    if (!nextStep) return;
+// Next va Option bosilganda
+// Next va Option va Edit bosilganda
+$(document).on("click", ".btn_next, .option, .modal_edit1", function () {
+  let nextStep = $(this).data("next");
+  if (!nextStep) return;
 
-    let modal = $(this).closest(".modal"); // faqat shu modal ichida ishlaydi
-    let steps = modal.find(".step");
+  let modal = $(this).closest(".modal"); // faqat shu modal ichida ishlaydi
+  let steps = modal.find(".step");
 
-    // Step 5dagi Next tugma bosilganda checkboxlarni tekshirish
-    if ($(this).closest(".step").data("step") == 5) {
-      let allChecked = $(".step5 input[type='checkbox'][required]")
-        .toArray()
-        .every(function (cb) {
-          return $(cb).is(":checked");
-        });
+  // Step 5 da faqat Next tugma bosilganda checkboxlarni tekshirish
+  if (
+    $(this).closest(".step").data("step") == 5 &&
+    $(this).hasClass("btn_next")
+  ) {
+    let allChecked = $(".step5 input[type='checkbox'][required]")
+      .toArray()
+      .every(function (cb) {
+        return $(cb).is(":checked");
+      });
 
-      if (!allChecked) {
-        $(".step5  .btn_next").addClass("disabled");
-        return;
-      } else {
-        $(".step5  .btn_next").removeClass("disabled");
-      }
+    if (!allChecked) {
+      $(".step5 .btn_next").addClass("disabled");
+      return;
+    } else {
+      $(".step5 .btn_next").removeClass("disabled");
     }
+  }
 
-    steps.removeClass("active");
-    modal.find(`.step[data-step="${nextStep}"]`).addClass("active");
-  });
+  // Step almashtirish
+  steps.removeClass("active");
+  modal.find(`.step[data-step="${nextStep}"]`).addClass("active");
+});
 
-  // Back bosilganda
-  $(document).on("click", ".steps_back", function () {
-    let modal = $(this).closest(".modal");
-    let activeStep = modal.find(".step.active");
-    let currentStep = parseInt(activeStep.data("step"));
+// Back bosilganda
+$(document).on("click", ".steps_back", function () {
+  let modal = $(this).closest(".modal");
+  let activeStep = modal.find(".step.active");
+  let currentStep = parseInt(activeStep.data("step"));
 
-    if (currentStep > 1) {
-      activeStep.removeClass("active");
-      modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
-    }
-  });
+  if (currentStep > 1) {
+    activeStep.removeClass("active");
+    modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
+  }
+});
+// Back bosilganda
+$(document).on("click", ".steps_back", function () {
+  let modal = $(this).closest(".modal");
+  let activeStep = modal.find(".step.active");
+  let currentStep = parseInt(activeStep.data("step"));
+
+  if (currentStep > 1) {
+    activeStep.removeClass("active");
+    modal.find(`.step[data-step="${currentStep - 1}"]`).addClass("active");
+  }
+});
 
   $(".grid_2 .option").click(function () {
     $(this).attr("data-value");
@@ -197,7 +214,6 @@ $(".open_register_ac").click(function (e) {
 $(document).ready(function () {
   $(".step5  .btn_next").on("click", function (e) {
     e.preventDefault(); // Default tugma ishini to'xtatamiz
-
     // 5-step ichidagi barcha required checkboxlarni tekshiramiz
     var allChecked = $(".step5 input[type='checkbox'][required]")
       .toArray()
