@@ -169,9 +169,14 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  // Ingliz tilini default qilib qo'yamiz
+  $.datepicker.setDefaults($.datepicker.regional["en"]);
+
+  // Sana tanlash
   $(".policy_date").datepicker({
-    dateFormat: "yy-mm-dd",
+    dateFormat: "yy-mm-dd", // yil-oy-kun formatida
   });
+
   function handleFileInput(fileInput) {
     $(fileInput).on("change", function () {
       const files = this.files;
