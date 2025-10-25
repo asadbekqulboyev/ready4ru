@@ -30,6 +30,7 @@
 @import "travel_insurance";
 @import "booking";
 @import "destinations";
+@import "faild";
 
 body {
   color: #fff;
@@ -62,6 +63,9 @@ body {
   @media (max-width: 556px) {
     background: url("../images/mobile_bg.png") no-repeat center;
     background-size: cover;
+  }
+  &.field_wrapper {
+    background-size: 590% 700%;
   }
 }
 .container {
@@ -406,3 +410,5 @@ li {
 .input_error {
   border: 2px solid red !important;
 }
+
+//
