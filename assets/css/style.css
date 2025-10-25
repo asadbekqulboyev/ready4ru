@@ -742,7 +742,7 @@
   max-width: 100%;
 }
 .blocks .trip_items .trip_item:hover {
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(15px);
 }
@@ -799,6 +799,44 @@
   .blocks .trip_items.foor .trip_item {
     width: 100%;
   }
+}
+@media (max-width: 768px) {
+  .blocks.reserve {
+    padding-top: 60px;
+  }
+}
+.blocks.reserve .section_title {
+  position: relative;
+  z-index: 2;
+}
+.blocks.reserve .trip_items {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .blocks.reserve .trip_items {
+    gap: 20px;
+  }
+}
+.blocks.reserve .trip_item {
+  gap: 18px;
+  padding: 52px 40px 59px;
+  justify-content: flex-start;
+}
+.blocks.reserve .trip_item h3 {
+  text-align: left;
+  width: 100%;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 112%;
+  text-align: center;
+  margin-top: 10px;
+}
+.blocks.reserve .trip_item p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 132%;
+  text-align: center;
 }
 .blocks .covered_sm_items {
   width: calc(57% - 20px);
@@ -1869,6 +1907,9 @@
   line-height: 24px;
   height: 48px;
 }
+.modal#modal_register_b .dates label input.input_error, .modal#modal_register_ac .dates label input.input_error {
+  border-color: red !important;
+}
 .modal#modal_register_b .dates label img, .modal#modal_register_ac .dates label img {
   position: absolute;
   top: 31px;
@@ -2690,6 +2731,140 @@
   }
 }
 
+.booking_option_items {
+  margin-top: 50px;
+}
+@media (max-width: 1024px) {
+  .booking_option_items {
+    flex-wrap: wrap;
+    gap: 40px 0;
+  }
+}
+@media (max-width: 768px) {
+  .booking_option_items {
+    gap: 20px;
+  }
+}
+.booking_option_item {
+  padding: 62px 10px 45px;
+  border: 1px solid #6e44d9;
+  width: calc(25% - 20px);
+  border-radius: 40px;
+  transition: all 0.2s linear;
+}
+.booking_option_item:hover {
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 1200px) {
+  .booking_option_item {
+    padding: 40px 10px 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .booking_option_item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 556px) {
+  .booking_option_item {
+    width: 100%;
+  }
+}
+.booking_option_item img {
+  max-width: 90%;
+}
+.booking_option_item .booking_option_title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+  margin-top: 56px;
+}
+@media (max-width: 1200px) {
+  .booking_option_item .booking_option_title {
+    margin-top: 40px;
+  }
+}
+.booking_option_item p {
+  font-weight: 400;
+  color: #fff;
+  font-size: 22px;
+}
+
+.destinations {
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+.destinations_items {
+  margin-top: 50px;
+  gap: 40px 0;
+}
+@media (max-width: 556px) {
+  .destinations_items {
+    gap: 20px 0;
+  }
+}
+.destinations_item {
+  position: relative;
+  width: calc(25% - 20px);
+  overflow: hidden;
+  border-radius: 40px;
+  line-height: 0;
+  margin-top: 0;
+}
+.destinations_item:hover .destinations_item_info {
+  background: transparent;
+}
+@media (max-width: 1024px) {
+  .destinations_item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 556px) {
+  .destinations_item {
+    width: 100%;
+  }
+}
+.destinations_item img {
+  width: 100%;
+}
+.destinations_item_info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 31px;
+  overflow: hidden;
+}
+.destinations_item_info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(106, 35, 164, 0.5411764706) 0%, rgba(41, 7, 89, 0.5098039216) 100%);
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+.destinations_item_info:hover::before {
+  opacity: 0;
+}
+.destinations_item_info * {
+  position: relative;
+  z-index: 1;
+}
+.destinations_item h3 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+
 body {
   color: #fff;
   font-family: "Segoe UI" !important;
@@ -3073,4 +3248,16 @@ li {
   .greencard p {
     margin-top: 20px;
   }
+}
+
+.btn_next.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.input_error {
+  border: 2px solid red !important;
 }/*# sourceMappingURL=style.css.map */
