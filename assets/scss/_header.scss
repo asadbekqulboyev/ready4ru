@@ -12,6 +12,7 @@
   &.active {
     background: #1a073f;
     padding: 8px 0;
+    z-index: 99999;
     .container {
       gap: 8px;
     }
