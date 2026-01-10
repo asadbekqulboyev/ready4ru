@@ -35,7 +35,7 @@ $(document).ready(function () {
   });
   $(".lcation").click(function (e) {
     e.preventDefault();
-    $(".modal").fadeIn(200);
+    $(".modal.location").fadeIn(200);
   });
   $(".modal_links a").click(function (e) {
     e.preventDefault();
@@ -248,5 +248,27 @@ $(document).ready(function () {
       $(".step5  .btn_next").addClass("disabled");
       return;
     }
+  });
+});
+$(".pay_btn").click(function (e) {
+  e.preventDefault();
+  $(".modal.price_modal").fadeIn(200);
+});
+$(".add_card").click(function () {
+  $(".modal").fadeOut(200);
+  $(".profile_form_top").fadeOut(0);
+  $(".profile .form").addClass("active");
+  $(".form_bottom").addClass("active");
+});
+$(".edit_profile").click(function () {
+  $(".modal.form_edit_modal").fadeIn(200);
+});
+
+$(function () {
+  $(".form_input_card").inputmask({
+    mask: "9999 9999 9999 9999[ 999]",
+    placeholder: "",
+    showMaskOnHover: false,
+    clearIncomplete: true,
   });
 });

@@ -122,6 +122,7 @@
       }
     }
   }
+
   &#modal_register_b,
   &#modal_register_ac {
     .modal_content {
@@ -777,6 +778,56 @@
       clip-path: polygon(0 0, 100% 0, 90.5% 100%, 0% 100% /* chap pastki */);
     }
   }
+  &.price_modal {
+    .modal_content {
+      max-width: 350px;
+      padding: 34px 36px;
+      .modal_top {
+        padding-bottom: 13px;
+        border-bottom: 1px dotted #eee;
+      }
+    }
+    .price_btn {
+      border-radius: 50px;
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
+      padding: 10px;
+      font-size: 24px;
+      font-style: normal;
+      display: block;
+      width: fit-content;
+      font-weight: 700;
+    }
+    .modal_title {
+      padding-bottom: 14px;
+      font-size: 24px;
+      border: 0;
+      &::after {
+        display: none;
+      }
+    }
+    .modal_txt {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      color: #0a2540;
+      padding: 13px 0;
+      border-bottom: 1px dashed #eee;
+      strong {
+        font-weight: 700;
+      }
+    }
+    .button {
+      margin-top: 13px;
+    }
+  }
+
   &_tab_btns {
     padding: 21px 0;
     justify-content: space-between;
@@ -845,6 +896,86 @@
           border-color: #0a2540;
         }
       }
+    }
+  }
+  &.form_edit_modal {
+    .modal_content {
+      max-width: 350px;
+      padding: 34px 36px;
+    }
+    .modal_title {
+      padding-bottom: 20px;
+      border: 0;
+      font-size: 24px;
+      &::after {
+        display: none;
+      }
+    }
+    .modal_inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      input {
+        border-radius: 8px;
+        border: 1px solid #e2e2e2;
+        background: #fff;
+        padding: 12px 14px 12px 16px;
+      }
+    }
+    .modal_chec {
+      margin-top: 18px;
+      gap: 6px;
+      padding-bottom: 18px;
+      border-bottom: 1px dotted #eee;
+      cursor: pointer;
+      color: #0a2540;
+      font-size: 15px;
+      .custom_checkbox {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        flex: 0 0 auto;
+        input {
+          display: none;
+        }
+
+        .checkbox_box {
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+          border: 2px solid #6e44d9;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s ease;
+
+          .checkbox_icon {
+            width: 9px;
+            height: 6px;
+            fill: #6e44d9;
+            opacity: 0;
+            transform: scale(0.6);
+            transition: all 0.15s ease;
+          }
+        }
+
+        input:checked + .checkbox_box {
+          background: #fff;
+          border-color: #6e44d9;
+          .checkbox_icon {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+
+        &:hover .checkbox_box {
+          box-shadow: 0 0 0 2px rgba(110, 68, 217, 0.15);
+        }
+      }
+    }
+    .button {
+      margin-top: 21px;
     }
   }
 }

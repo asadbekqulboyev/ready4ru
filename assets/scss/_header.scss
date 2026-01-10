@@ -326,4 +326,57 @@
       }
     }
   }
+  .account {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 3px solid #8f2cff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar_inner {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+
+      background: radial-gradient(
+        120% 120% at 30% 20%,
+        #c300ff 0%,
+        #8a00e6 45%,
+        #5c00cc 100%
+      );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .avatar_inner span {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .account_info {
+      p {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      a {
+        color: #cf06f2;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        text-decoration-line: underline;
+      }
+    }
+  }
 }
