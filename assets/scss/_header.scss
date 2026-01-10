@@ -338,13 +338,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @media (max-width: 768px) {
+        height: 49px;
+        width: 49px;
+      }
     }
 
     .avatar_inner {
       width: 52px;
       height: 52px;
       border-radius: 50%;
-
+      @media (max-width: 768px) {
+        height: 39px;
+        width: 39px;
+      }
       background: radial-gradient(
         120% 120% at 30% 20%,
         #c300ff 0%,
@@ -362,6 +369,9 @@
       font-size: 26px;
       font-weight: 700;
       line-height: 1;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
     .account_info {
       p {

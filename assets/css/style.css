@@ -376,6 +376,12 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .header .account .avatar {
+    height: 49px;
+    width: 49px;
+  }
+}
 .header .account .avatar_inner {
   width: 52px;
   height: 52px;
@@ -385,11 +391,22 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .header .account .avatar_inner {
+    height: 39px;
+    width: 39px;
+  }
+}
 .header .account .avatar_inner span {
   color: #fff;
   font-size: 26px;
   font-weight: 700;
   line-height: 1;
+}
+@media (max-width: 768px) {
+  .header .account .avatar_inner span {
+    font-size: 20px;
+  }
 }
 .header .account .account_info p {
   color: #fff;
@@ -3145,7 +3162,12 @@
 }
 @media (max-width: 768px) {
   .profile {
-    padding-top: 160px;
+    padding-top: 60px;
+  }
+}
+@media (max-width: 650px) {
+  .profile {
+    padding-top: 150px;
   }
 }
 .profile .section_title {
@@ -3434,9 +3456,21 @@
 .profile .profile_form_lock {
   gap: 10px;
 }
+@media (max-width: 768px) {
+  .profile .profile_form_lock {
+    margin-top: 20px;
+    align-items: flex-start !important;
+    gap: 5px;
+  }
+}
 .profile .profile_form_lock h2 {
   font-size: 34px;
   line-height: 37px;
+}
+@media (max-width: 768px) {
+  .profile .profile_form_lock h2 {
+    font-size: 20px;
+  }
 }
 
 body {

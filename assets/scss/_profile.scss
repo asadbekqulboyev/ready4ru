@@ -5,7 +5,10 @@
     padding-top: 230px;
   }
   @media (max-width: 768px) {
-    padding-top: 160px;
+    padding-top: 60px;
+  }
+  @media (max-width: 650px) {
+    padding-top: 150px;
   }
   .section_title {
     text-align: left;
@@ -283,9 +286,17 @@
   }
   .profile_form_lock {
     gap: 10px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      align-items: flex-start !important;
+      gap: 5px;
+    }
     h2 {
       font-size: 34px;
       line-height: 37px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
 }
