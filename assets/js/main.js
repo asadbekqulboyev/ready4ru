@@ -272,3 +272,31 @@ $(function () {
     clearIncomplete: true,
   });
 });
+let wievs_slide = new Swiper(".wievs_slide", {
+  navigation: {
+    nextEl: ".btn.next",
+    prevEl: ".btn.prev",
+  },
+  pagination: {
+    el: ".wievs_slide-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1200: {
+      spaceBetween: 40,
+      slidesPerView: 4,
+    },
+  },
+});
