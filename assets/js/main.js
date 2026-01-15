@@ -300,3 +300,19 @@ let wievs_slide = new Swiper(".wievs_slide", {
     },
   },
 });
+$(".open_reg").click(function (e) {
+  e.preventDefault();
+  $(".form_edit_modal2").fadeIn(200);
+});
+$(document).ready(function () {
+  $("input[type='tel']").inputmask("+7 (999) 999-99-99");
+});
+$(".login_open").click(function (e) {
+  e.preventDefault();
+  $(".modal_login").fadeIn(200);
+});
+$('.login_code').click(function (e) {
+  e.preventDefault();
+  $('.modal_login').fadeOut(0);
+  $('.modal_login2').fadeIn(200);
+});

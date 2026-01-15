@@ -898,7 +898,11 @@
       }
     }
   }
-  &.form_edit_modal {
+
+  &.form_edit_modal,
+  &.form_edit_modal2,
+  &.modal_login,
+  &.modal_login2 {
     .modal_content {
       max-width: 350px;
       padding: 34px 36px;
@@ -920,6 +924,11 @@
         border: 1px solid #e2e2e2;
         background: #fff;
         padding: 12px 14px 12px 16px;
+        outline: none;
+        transition: all 0.2s linear;
+        &:focus {
+          border: 1px solid #6e44d9;
+        }
       }
     }
     .modal_chec {
@@ -976,6 +985,122 @@
     }
     .button {
       margin-top: 21px;
+    }
+    .passport_upload {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border: 1px dashed #6e44d9;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #0a2540;
+
+      .upload_icon {
+        font-size: 18px;
+        color: #6e44d9;
+      }
+
+      &:hover {
+        background: rgba(110, 68, 217, 0.05);
+      }
+    }
+
+    .passport_example {
+      color: #6e44d9;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      text-decoration: underline;
+      margin-top: 21px;
+      position: relative;
+      span {
+        max-width: 190px;
+        width: fit-content;
+      }
+      p {
+        display: inline-flex;
+        padding: 15px 17px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 11px;
+        border: 1px solid #cf06f2;
+        background: #fff;
+        box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.16);
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        transform: scale(0);
+        transition: all 0.2s linear;
+      }
+      .info_bl:hover + p {
+        transform: scale(1);
+      }
+    }
+  }
+  &.form_edit_modal2 {
+    .modal_top {
+      @media (max-width: 768px) {
+        padding-top: 30px;
+      }
+    }
+    .modal_content {
+      @media (max-width: 768px) {
+        padding: 28px 22px;
+      }
+    }
+    .modal_title {
+      padding-bottom: 20px;
+      border: 0;
+      font-size: 21px;
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &.modal_login,
+  &.modal_login2 {
+    .buttons {
+      margin-top: 21px;
+      padding-top: 21px;
+      border-top: 1px dotted #eee;
+      .button {
+        margin-top: 0;
+        width: calc(50% - 4.5px);
+        &.light {
+          border-radius: 10px;
+          background: #f8f8f8;
+        }
+      }
+    }
+    .modal_top {
+      padding-bottom: 21px;
+    }
+    .login_desc {
+      color: #0a2540;
+      font-family: "Segoe UI";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 21px;
+    }
+    .modal_inputs {
+      position: relative;
+      svg {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        fill: #aaa;
+        background: #fff;
+      }
+    }
+    .inputs_code {
+      margin-top: 10px;
     }
   }
 }
