@@ -903,6 +903,7 @@
   &.form_edit_modal2,
   &.modal_login,
   &.modal_login2 {
+    z-index: 111111;
     .modal_content {
       max-width: 350px;
       padding: 34px 36px;
@@ -1062,6 +1063,7 @@
   }
   &.modal_login,
   &.modal_login2 {
+    z-index: 111111;
     .buttons {
       margin-top: 21px;
       padding-top: 21px;

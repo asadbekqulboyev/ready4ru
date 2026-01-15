@@ -2697,6 +2697,9 @@
 .modal_links ul a:hover {
   border-color: #0a2540;
 }
+.modal.form_edit_modal, .modal.form_edit_modal2, .modal.modal_login, .modal.modal_login2 {
+  z-index: 111111;
+}
 .modal.form_edit_modal .modal_content, .modal.form_edit_modal2 .modal_content, .modal.modal_login .modal_content, .modal.modal_login2 .modal_content {
   max-width: 350px;
   padding: 34px 36px;
@@ -2845,6 +2848,9 @@
   .modal.form_edit_modal2 .modal_title {
     font-size: 18px;
   }
+}
+.modal.modal_login, .modal.modal_login2 {
+  z-index: 111111;
 }
 .modal.modal_login .buttons, .modal.modal_login2 .buttons {
   margin-top: 21px;
