@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready 4 Ru</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container flex column">
+                <div class="header_top flex between a_center">
+                    <div class="header_top_left flex a_center">
+                        <a href="#" class="header_logo"><img src="assets/images/logo.svg" alt=""></a>
+                        <sapn class="lcation flex a_center">
+                            <span>Moscow</span>
+                            <img src="assets/images/arrow_down.svg" alt="">
+                        </sapn>
+                    </div>
+                    <div class="header_top_right flex a_center">
+                        <ul class="header_top_menu flex a_center">
+                            <li><a href="#">Our story</a></li>
+                            <li><a href="#" class="open_reg_modal">Contacts</a></li>
+                        </ul>
+                        <div class="buttonlist flex a_center">
+                            <a href="#" class="button open_reg">Registration</a>
+                            <a href="#" class="button light flex a_center login_open">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16 19.5H9V21H16C17.6569 21 19 19.6569 19 18V6C19 4.34315 17.6569 3 16 3H9V4.5H16C16.8284 4.5 17.5 5.17157 17.5 6V18C17.5 18.8284 16.8284 19.5 16 19.5ZM10.1125 15.1836L11.1716 16.2427L12.2322 15.182L14.7071 12.7072C15.0976 12.3166 15.0976 11.6835 14.7071 11.293L12.2322 8.81808L11.1716 7.75742L10.1125 8.81647L12.5461 11.2501H5V12.7501H12.5461L10.1125 15.1836Z"
+                                        fill="#6E44D9" />
+                                </svg>
+                                <span>Sign up</span></a>
+                            <div class="hamburger "><span></span><span></span><span></span></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="header_menu_responsive">
+                    <div class="header_bottom flex ">
+                        <ul class="header_bottom_menu flex ">
+                            <li><a href="#">Apply for bank cards</a></li>
+                            <li><a href="#">Russian bank card to up</a></li>
+                            <li><a href="#">Travel insurance</a></li>
+                            <li><a href="#">Green card for vehicle</a></li>
+                            <li><a href="#">Air tickets</a></li>
+                            <li><a href="#">Hotels</a></li>
+                        </ul>
+                        <a href="#" class="button blue">Our Blog</a>
+                        <h2 class="site_link">Site navigation</h2>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <img src="assets/images/shadow.png" alt="" class="shadow">
+                <img src="assets/images/righ_star.png" alt="" class="star_right">
+                <div class="container">
+                    <img src="assets/images/hero_big_elipse.png" alt="" class="hero_elipse_big">
+                    <h1 class="hero_title">Making, replenishment of bank cards, travel insurance for Russia</h1>
+                    <div class="hero_tab">
+                        <div class="hero_tab_btns flex ">
+                            <a href="#tab1" class="hero_tab_btn active flex a_center">
+                                <img src="assets/images/tab_btn1.svg" alt="">
+                                <span>Russian <br> bank card</span>
+                            </a>
+                            <a href="#tab2" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn2.svg" alt="">
+                                <span>Russian bank <br> card to up</span>
+                            </a>
+                            <a href="#tab3" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn3.svg" alt="">
+                                <span>Travel insurance <br>to Russia </span>
+                            </a>
+                            <a href="#tab4" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn4.svg" alt="">
+                                <span>Greencard for <br> vehicle</span>
+                            </a>
+                            <a href="#tab5" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn5.svg" alt="">
+                                <span>Air tickets</span>
+                            </a>
+                            <a href="#tab6" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn6.svg" alt="">
+                                <span>Hotels</span>
+                            </a>
+                        </div>
+                        <div class="hero_tab_content">
+                            <img src="assets/images/hand_icon.png" alt="" class="hand_img">
+                            <div class="tab_item" id="tab1">
+                                <div class="flex a_center between tab_item_content">
+                                    <h3 class="tab_item_title">Open a bank card for trip to Russia online or any country
+                                        delivery</h3>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                    <a href="#" class="button blue modal_open">Order card</a>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab2" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <h3 class="tab_item_title">Top up bank card account for trip to Russia</h3>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                    <a href="#" class="button blue modal_open">Top up card</a>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab3" style="display: none;">
+                                <div class=" tab_item_content">
+
+                                    <div id="solid_widget"></div>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab4" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <h3 class="tab_item_title">Order green card for vehicle for trip to Russia</h3>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                    <a href="#" class="button blue modal_open">Order green card</a>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab5" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <script async
+                                        src="https://tpscr.com/content?currency=rub&trs=420552&shmarker=635186&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%236e44d9&color_button=%236E44D9ff&color_icons=%236e44d9&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=false&promo_id=7879&campaign_id=100"
+                                        charset="utf-8"></script>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab6" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <script async
+                                        src="https://tpscr.com/content?currency=rub&trs=420552&shmarker=635186&show_hotels=false&powered_by=false&locale=ru&searchUrl=www.aviasales.com%2Fsearch&primary_override=%236e44d9&color_button=%236E44D9ff&color_icons=%236e44d9&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=true&promo_id=7873&campaign_id=101"
+                                        charset="utf-8"></script>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="assets/images/hero_small_elipse.svg" alt="" class="hero_elipse_small">
+                    <img src="assets/images/small_star.png" alt="" class="hero_elipse_small img2">
+                </div>
+            </section>
+            <section class="blocks index">
+                <img src="assets/images/block_shadow.png" alt="" class="blocks_shadow">
+                <div class="container">
+                    <div class="tab_item_blocks flex between wrap">
+                        <div class="tab_item_block flex a_start">
+                            <div class="tab_item_block_img">
+                                <img src="assets/images/tab_img1.svg" alt="">
+
+                            </div>
+                            <div class="tab_item_block_content">
+                                <div>
+                                    <h3 class="tab_item_block_title">Order Russian bank card</h3>
+                                    <ul class="tab_item_block_lists flex column">
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">We’ll issue a bank card for trip to Russia</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">For travelers from any country of the
+                                                world</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">For any payments, withdrawals and
+                                                transfers</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Pay with MirPay by your mobile</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Add funds with ATMs in Russia</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Issuance and maintenance</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="buttons flex a_center">
+                                    <a href="#" class="button">
+                                        Get consultation
+                                    </a>
+                                    <a href="#" class="button light">Issue card</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_item_block flex a_start">
+                            <div class="tab_item_block_img">
+                                <img src="assets/images/tab_img2.svg" alt="">
+                            </div>
+                            <div class="tab_item_block_content">
+                                <div>
+                                    <h3 class="tab_item_block_title">Russian bank card replenishment</h3>
+                                    <ul class="tab_item_block_lists flex column">
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Add funds of Russian bank card for any sum</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Everything is online</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Replenishment of any bank cards from any
+                                                country</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="buttons flex  column">
+                                    <a href="#" class="button">
+                                        Get consultation
+                                    </a>
+                                    <a href="#" class="button light">Russian bank card replenishment</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_item_block flex a_center">
+                            <img src="assets/images/tab_img3.png" alt="">
+                            <div class="tab_item_block_content">
+                                <div>
+                                    <h3 class="tab_item_block_title">Insurance of travelers for visa to Russia</h3>
+                                    <ul class="tab_item_block_lists flex column">
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Insurance policy 100% suitable for applying for visa to
+                                                Russia</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">The insurance company is accredited by the Russia
+                                                Consulate</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">For single or multiple trips</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="buttons flex ">
+                                    <a href="#" class="button">
+                                        Get consultation
+                                    </a>
+                                    <a href="#" class="button light">Issue insurance to Russia</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_item_block flex a_center">
+                            <div class="tab_item_block_content">
+                                <div>
+                                    <h3 class="tab_item_block_title">Issue Green card for vehicle</h3>
+                                    <p>Driving to Russia? Submit your Green Card request in just 5 minutes
+                                        The Green Card is mandatory international insurance for entering Russia with
+                                        your personal vehicle.
+                                        The policy is checked at the border — you cannot enter without it.</p>
+                                    <ul class="tab_item_block_lists flex column">
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Equivalent of internal insurance for vehicle for
+                                                traveling around Russia</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">For vehicles from any country of the world</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Insurance policy complies with Russian legislation
+                                                requirements</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="buttons flex ">
+                                    <a href="#" class="button">
+                                        Get consultation
+                                    </a>
+                                    <a href="#" class="button light">Issue Green card</a>
+                                </div>
+                            </div>
+                            <img src="assets/images/tab_img4.png" alt="">
+
+                        </div>
+                        <div class="tab_item_block flex a_start">
+                            <div class="tab_item_block_img">
+                                <img src="assets/images/tab_img5.png" alt="">
+                            </div>
+                            <div class="tab_item_block_content">
+                                <div>
+                                    <h3 class="tab_item_block_title">Air tickets for Russia and around Russia</h3>
+                                    <ul class="tab_item_block_lists flex column">
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Search for cheep flights</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Comparison of ticket prices on different airlines</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Composite and complicated routes</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Low price calendar</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Add funds with ATMs in Russia</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Issuance and maintenance</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="buttons flex a_center">
+                                    <a href="#" class="button light">Buy tickets</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab_item_block flex a_start">
+                            <div class="tab_item_block_img">
+                                <img src="assets/images/tab_img6.png" alt="">
+                            </div>
+                            <div class="tab_item_block_content">
+                                <div>
+                                    <h3 class="tab_item_block_title">Russian bank card replenishment</h3>
+                                    <ul class="tab_item_block_lists flex column">
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Add funds of Russian bank card for any sum</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Everything is online</span>
+                                        </li>
+                                        <li>
+                                            <span class="dot"></span>
+                                            <span class="text">Replenishment of any bank cards from any
+                                                country</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="buttons flex  column">
+                                    <a href="#" class="button">
+                                        Get consultation
+                                    </a>
+                                    <a href="#" class="button light">Russian bank card replenishment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container flex between a_center">
+                <a href="#" class="logo">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <div class="footer_menu flex ">
+                    <ul class="footer_menu_lists flex ">
+                        <li><a href="#">Apply for bank cards</a></li>
+                        <li><a href="#">Russian bank card to up</a></li>
+                        <li><a href="#">Travel insurance</a></li>
+                        <li><a href="#">Green card for vehicle</a></li>
+                        <li><a href="#">Air tickets</a></li>
+                        <li><a href="#">Hotels</a></li>
+                    </ul>
+                    <a href="#" class="button blue">Our Blog</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal">
+        <div class="modal_content">
+            <div class="modal_exit">
+                <span>&times;</span>
+            </div>
+            <h2 class="modal_title">
+                Select city
+            </h2>
+            <div class="modal_tab_btns flex wrap a_center">
+                <a href="#modal_tab1" class="modal_tab_btn flex a_center active">
+                    A
+                </a>
+                <a href="#modal_tab2" class="modal_tab_btn flex a_center">
+                    B
+                </a>
+                <a href="#modal_tab3" class="modal_tab_btn flex a_center">
+                    C
+                </a>
+                <a href="#modal_tab4" class="modal_tab_btn flex a_center">
+                    D
+                </a>
+                <a href="#modal_tab5" class="modal_tab_btn flex a_center">
+                    E
+                </a>
+                <a href="#modal_tab6" class="modal_tab_btn flex a_center">
+                    F
+                </a>
+                <a href="#modal_tab7" class="modal_tab_btn flex a_center">
+                    G
+                </a>
+                <a href="#modal_tab8" class="modal_tab_btn flex a_center">
+                    H
+                </a>
+                <a href="#modal_tab9" class="modal_tab_btn flex a_center">
+                    I
+                </a>
+                <a href="#modal_tab10" class="modal_tab_btn flex a_center">
+                    J
+                </a>
+            </div>
+            <div class="modal_tab_content">
+                <div class="modal_item" id="modal_tab1">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab2">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab3">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab4">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab5">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab6">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab7">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab8">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab9">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab10">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal form_edit_modal2">
+        <div class="modal_content">
+
+            <div class="modal_exit">
+                <span>&times;</span>
+            </div>
+
+            <div class="modal_top">
+                <h2 class="modal_title">
+                    To receive your card, <br> please fill in your details and complete identification.
+                </h2>
+            </div>
+
+            <div class="modal_inputs">
+                <input type="text" placeholder="Surname">
+                <input type="text" placeholder="Name">
+                <input type="tel" placeholder="Phone">
+                <input type="text" placeholder="Registration address">
+                <input type="text" placeholder="Card delivery address">
+            </div>
+
+            <label class="modal_chec flex a_center">
+                <span class="custom_checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox_box">
+                        <svg class="checkbox_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.04045 0.707107L3.37378 5.37375C3.17851 5.56902 2.86191 5.56902 2.66667 5.37375L0 2.70709L0.707107 2.00002L3.02025 4.31309L7.33331 0L8.04045 0.707107Z" />
+                        </svg>
+                    </span>
+                </span>
+                <p>Matches the registration address</p>
+            </label>
+
+            <!-- Upload passport -->
+            <label class="passport_upload flex between a_center">
+                <span>Upload a photo of your passport</span>
+                <input type="file" hidden>
+                <span class="upload_icon"> <img src="assets/images/file.svg" alt=""></span>
+            </label>
+
+            <a href="#" class="passport_example flex  a_center">
+                <span>View an example document photograph</span>
+                <img src="assets/images/i_blue.svg" alt="" class="info_bl">
+                <p>
+                    To receive your card, please fill in your details and complete identification.
+                </p>
+            </a>
+
+            <a href="#" class="button blue add_card">
+                Save and continue
+            </a>
+
+        </div>
+    </div>
+    <div class="modal modal_login">
+        <div class="modal_content">
+            <div class="modal_exit">
+                <span>&times;</span>
+            </div>
+
+            <div class="modal_top">
+                <h2 class="modal_title">
+                    Register a <br> personal account
+                </h2>
+                <p class="login_desc">Enter your email address to log in to your personal account. A confirmation code
+                    will be sent to your
+                    email address.</p>
+            </div>
+
+            <div class="modal_inputs">
+                <input type="email" placeholder="E-mail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <path
+                        d="M19.5 13C19.5 14.3808 18.3808 15.5 17 15.5H3C1.61929 15.5 0.5 14.3808 0.5 13V1.2041L1.22754 1.86914L9.66309 9.57227L10 9.87988L10.3369 9.57227L18.7725 1.86914L19.5 1.2041V13ZM18.1631 3.10352L10.1689 10.4033C10.0735 10.4905 9.92651 10.4905 9.83105 10.4033L1.83691 3.10352L1 2.33887V13C1 14.1045 1.89542 15 3 15H17C18.1045 15 19 14.1045 19 13V2.33887L18.1631 3.10352ZM1 0.5H19C19.2762 0.5 19.5 0.723856 19.5 1H0.5C0.5 0.723862 0.723862 0.5 1 0.5Z"
+                        fill="#6E44D9" stroke="#6E44D9" />
+                </svg>
+            </div>
+            <div class="flex buttons between">
+                <a href="#" class="button blue add_card login_code">
+                    Login
+                </a>
+                <a href="#" class="button light add_card">
+                    Register
+                </a>
+            </div>
+            <label class="modal_chec flex a_start">
+                <span class="custom_checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox_box">
+                        <svg class="checkbox_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.04045 0.707107L3.37378 5.37375C3.17851 5.56902 2.86191 5.56902 2.66667 5.37375L0 2.70709L0.707107 2.00002L3.02025 4.31309L7.33331 0L8.04045 0.707107Z" />
+                        </svg>
+                    </span>
+                </span>
+                <p>I accept the <a href="#" class="link">User Agreement</a> and <a href="#" class="link">
+                        Consent to the processing of personal data
+                    </a></p>
+            </label>
+
+
+        </div>
+    </div>
+    <div class="modal modal_login2">
+        <div class="modal_content">
+            <div class="modal_exit">
+                <span>&times;</span>
+            </div>
+
+            <div class="modal_top">
+                <h2 class="modal_title">
+                    Register a <br> personal account
+                </h2>
+                <p class="login_desc">Enter the code from your email or follow the link in the message</p>
+            </div>
+
+            <div class="modal_inputs">
+                <input type="email" placeholder="E-mail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <path
+                        d="M19.5 13C19.5 14.3808 18.3808 15.5 17 15.5H3C1.61929 15.5 0.5 14.3808 0.5 13V1.2041L1.22754 1.86914L9.66309 9.57227L10 9.87988L10.3369 9.57227L18.7725 1.86914L19.5 1.2041V13ZM18.1631 3.10352L10.1689 10.4033C10.0735 10.4905 9.92651 10.4905 9.83105 10.4033L1.83691 3.10352L1 2.33887V13C1 14.1045 1.89542 15 3 15H17C18.1045 15 19 14.1045 19 13V2.33887L18.1631 3.10352ZM1 0.5H19C19.2762 0.5 19.5 0.723856 19.5 1H0.5C0.5 0.723862 0.723862 0.5 1 0.5Z"
+                        fill="#6E44D9" stroke="#6E44D9" />
+                </svg>
+            </div>
+            <div class="modal_inputs inputs_code">
+                <input type="email" placeholder="Enter the code from your email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M5 5.5H19C20.3808 5.5 21.5 6.61929 21.5 8V16C21.5 17.3808 20.3808 18.5 19 18.5H5C3.61929 18.5 2.5 17.3808 2.5 16V8C2.5 6.61929 3.61929 5.5 5 5.5ZM5 6C3.89543 6 3 6.89543 3 8V16C3 17.1045 3.89542 18 5 18H19C20.1045 18 21 17.1045 21 16V8C21 6.89542 20.1045 6 19 6H5ZM18.5 13.9854V14.4854H16V13.9854H18.5ZM7.82324 11.0303L6.85352 12L7.82324 12.9697L7.46973 13.3232L6.5 12.3535L5.53027 13.3232L5.17676 12.9697L6.14648 12L5.17676 11.0303L5.53027 10.6768L6.5 11.6465L7.46973 10.6768L7.82324 11.0303ZM13.3232 11.0303L12.3535 12L13.3232 12.9697L12.9697 13.3232L12 12.3535L11.0303 13.3232L10.6768 12.9697L11.6465 12L10.6768 11.0303L11.0303 10.6768L12 11.6465L12.9697 10.6768L13.3232 11.0303Z"
+                        fill="#6E44D9" stroke="#6E44D9" />
+                </svg>
+            </div>
+            <div class="flex buttons between">
+                <a href="#" class="button blue add_card ">
+                    Login
+                </a>
+
+            </div>
+            <label class="modal_chec flex a_start">
+                <span class="custom_checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox_box">
+                        <svg class="checkbox_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.04045 0.707107L3.37378 5.37375C3.17851 5.56902 2.86191 5.56902 2.66667 5.37375L0 2.70709L0.707107 2.00002L3.02025 4.31309L7.33331 0L8.04045 0.707107Z" />
+                        </svg>
+                    </span>
+                </span>
+                <p>I accept the <a href="#" class="link">User Agreement</a> and <a href="#" class="link">
+                        Consent to the processing of personal data
+                    </a></p>
+            </label>
+
+
+        </div>
+    </div>
+    <div class="modal modal_login_first">
+        <div class="modal_content">
+            <div class="modal_exit">
+                <span>&times;</span>
+            </div>
+
+            <div class="modal_top">
+                <h2 class="modal_title">
+                    Login <br>
+                    to account
+                </h2>
+                <p class="login_desc">Enter your email address to log in to your personal account. A confirmation code
+                    will be sent to your email address.</p>
+            </div>
+
+            <div class="modal_inputs">
+                <input type="email" placeholder="E-mail">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+                    <path
+                        d="M19.5 13C19.5 14.3808 18.3808 15.5 17 15.5H3C1.61929 15.5 0.5 14.3808 0.5 13V1.2041L1.22754 1.86914L9.66309 9.57227L10 9.87988L10.3369 9.57227L18.7725 1.86914L19.5 1.2041V13ZM18.1631 3.10352L10.1689 10.4033C10.0735 10.4905 9.92651 10.4905 9.83105 10.4033L1.83691 3.10352L1 2.33887V13C1 14.1045 1.89542 15 3 15H17C18.1045 15 19 14.1045 19 13V2.33887L18.1631 3.10352ZM1 0.5H19C19.2762 0.5 19.5 0.723856 19.5 1H0.5C0.5 0.723862 0.723862 0.5 1 0.5Z"
+                        fill="#6E44D9" stroke="#6E44D9" />
+                </svg>
+            </div>
+            <div class="flex buttons between">
+                <a href="#" class="button blue add_card login_code">
+                    Login
+                </a>
+                <a href="#" class="button light add_card">
+                    Register
+                </a>
+            </div>
+            <label class="modal_chec flex a_start">
+                <span class="custom_checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox_box">
+                        <svg class="checkbox_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.04045 0.707107L3.37378 5.37375C3.17851 5.56902 2.86191 5.56902 2.66667 5.37375L0 2.70709L0.707107 2.00002L3.02025 4.31309L7.33331 0L8.04045 0.707107Z" />
+                        </svg>
+                    </span>
+                </span>
+                <p>I accept the <a href="#" class="link">User Agreement</a> and <a href="#" class="link">
+                        Consent to the processing of personal data
+                    </a></p>
+            </label>
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://attolloassistance.com/widget/solid/solid_widget.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/jquery.inputmask.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

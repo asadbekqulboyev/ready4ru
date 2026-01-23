@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready 4 Ru</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container flex column">
+                <div class="header_top flex between a_center">
+                    <div class="header_top_left flex a_center">
+                        <a href="#" class="header_logo"><img src="assets/images/logo.svg" alt=""></a>
+                        <sapn class="lcation flex a_center">
+                            <span>Moscow</span>
+                            <img src="assets/images/arrow_down.svg" alt="">
+                        </sapn>
+                    </div>
+                    <div class="header_top_right flex a_center">
+                        <ul class="header_top_menu flex a_center">
+                            <li><a href="#">Our story</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                        <div class="buttonlist flex a_center">
+                            <a href="#" class="button ">Registration</a>
+                            <a href="#" class="button light flex a_center ">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16 19.5H9V21H16C17.6569 21 19 19.6569 19 18V6C19 4.34315 17.6569 3 16 3H9V4.5H16C16.8284 4.5 17.5 5.17157 17.5 6V18C17.5 18.8284 16.8284 19.5 16 19.5ZM10.1125 15.1836L11.1716 16.2427L12.2322 15.182L14.7071 12.7072C15.0976 12.3166 15.0976 11.6835 14.7071 11.293L12.2322 8.81808L11.1716 7.75742L10.1125 8.81647L12.5461 11.2501H5V12.7501H12.5461L10.1125 15.1836Z"
+                                        fill="#6E44D9" />
+                                </svg>
+                                <span>Sign up</span></a>
+                            <div class="hamburger "><span></span><span></span><span></span></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="header_menu_responsive">
+                    <div class="header_bottom flex ">
+                        <ul class="header_bottom_menu flex ">
+                            <li><a href="#">Apply for bank cards</a></li>
+                            <li><a href="#">Russian bank card to up</a></li>
+                            <li><a href="#">Travel insurance</a></li>
+                            <li><a href="#">Green card for vehicle</a></li>
+                            <li><a href="#">Air tickets</a></li>
+                            <li><a href="#">Hotels</a></li>
+                        </ul>
+                        <a href="#" class="button blue">Our Blog</a>
+                        <h2 class="site_link">Site navigation</h2>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <img src="assets/images/shadow.png" alt="" class="shadow">
+                <img src="assets/images/righ_star.png" alt="" class="star_right">
+                <div class="container">
+                    <img src="assets/images/hero_big_elipse.png" alt="" class="hero_elipse_big">
+                    <h1 class="hero_title flex between a_center max "><span>Hotel Booking in Russia</span> <img
+                            src="assets/images/hero_hotel.png" alt="hero_img"></h1>
+                    <div class="hero_tab">
+                        <div class="hero_tab_btns flex ">
+                            <a href="#tab1" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn1.svg" alt="">
+                                <span>Russian <br> bank card</span>
+                            </a>
+                            <a href="#tab2" class="hero_tab_btn  flex a_center ">
+                                <img src="assets/images/tab_btn2.svg" alt="">
+                                <span>Russian bank <br> card to up</span>
+                            </a>
+                            <a href="#tab3" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn3.svg" alt="">
+                                <span>Travel insurance <br>to Russia </span>
+                            </a>
+                            <a href="#tab4" class="hero_tab_btn  flex a_center">
+                                <img src="assets/images/tab_btn4.svg" alt="">
+                                <span>Greencard for <br> vehicle</span>
+                            </a>
+                            <a href="#tab5" class="hero_tab_btn  flex a_center active">
+                                <img src="assets/images/tab_btn5.svg" alt="">
+                                <span>Air tickets</span>
+                            </a>
+                            <a href="#tab6" class="hero_tab_btn  flex a_center ">
+                                <img src="assets/images/tab_btn6.svg" alt="">
+                                <span>Hotels</span>
+                            </a>
+                        </div>
+                        <div class="hero_tab_content">
+                            <div class="tab_item" id="tab1">
+                                <div class="flex a_center between tab_item_content">
+                                    <h3 class="tab_item_title">Open a bank card for trip to Russia online or any country
+                                        delivery</h3>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                    <a href="#" class="button blue modal_open">Order card</a>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab2" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <h3 class="tab_item_title">Top up bank card account for trip to Russia</h3>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                    <a href="#" class="button blue modal_open">Top up card</a>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab3" style="display: none;">
+                                <div class=" tab_item_content">
+                                    <div id="solid_widget"></div>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab4" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <h3 class="tab_item_title">Order green card for vehicle for trip to Russia</h3>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                    <a href="#" class="button blue modal_open">Order green card</a>
+                                </div>
+                            </div>
+
+                            <div class="tab_item" id="tab5" style="display: block;">
+                                <div class="flex a_center between tab_item_content">
+                                    <script async
+                                        src="https://tpscr.com/content?currency=rub&trs=420552&shmarker=635186&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%236e44d9&color_button=%236E44D9ff&color_icons=%236e44d9&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=false&promo_id=7879&campaign_id=100"
+                                        charset="utf-8"></script>
+                                </div>
+                            </div>
+                            <div class="tab_item" id="tab6" style="display: none;">
+                                <div class="flex a_center between tab_item_content">
+                                    <script async
+                                        src="https://tpscr.com/content?currency=rub&trs=420552&shmarker=635186&show_hotels=false&powered_by=false&locale=ru&searchUrl=www.aviasales.com%2Fsearch&primary_override=%236e44d9&color_button=%236E44D9ff&color_icons=%236e44d9&secondary=%23FFFFFF&dark=%23262626&light=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=true&promo_id=7873&campaign_id=101"
+                                        charset="utf-8"></script>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <img src="assets/images/hero_small_elipse.svg" alt="" class="hero_elipse_small">
+                    <img src="assets/images/small_star.png" alt="" class="hero_elipse_small img2">
+                </div>
+            </section>
+            <section class="blocks reserve">
+                <img src="assets/images/block_shadow.png" alt="" class="blocks_shadow">
+                <div class="container">
+                    <h2 class="section_title mb">
+                        Finding air tickets to Russia</h2>
+                    <div class="trip_items flex between vehical_items">
+                        <div class="trip_item flex a_center between column">
+                            <img src="assets/images/avia_icon1.svg" alt="vehicl_card1">
+                            <h3>Favorable prices</h3>
+                            <p>Price without markups and without commissions</p>
+                        </div>
+                        <div class="trip_item flex a_center column between">
+                            <img src="assets/images/avia_icon2.svg" alt="vehicl_card2">
+                            <h3>Safely</h3>
+                            <p>Tickets from reliable partners and airlines across Russia</p>
+                        </div>
+                        <div class="trip_item flex a_center column between">
+                            <img src="assets/images/avia_icon3.svg" alt="vehicl_card3">
+                            <h3>No hidden conditions</h3>
+                            <p>All conditions are visible at once: luggage, exchange and return</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="destinations air_ticket">
+                <div class="container">
+                    <h2 class="section_title">Where to go</h2>
+                    <div class="destinations_items flex between wrap ">
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img1.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Moscow</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img2.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Saint Petersburg</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img3.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Kazan</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img4.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Sochi</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img5.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Krasnodar</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img9.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Vladivostok</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img7.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Yekaterinburg</h3>
+                            </div>
+                        </div>
+                        <div class="destinations_item">
+                            <img src="assets/images/destinations_img8.png" alt="">
+                            <div class="destinations_item_info">
+                                <h3>Dagestan</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="all_items">
+                        Show all (8)
+                    </div>
+                    <div class="flex center a_center">
+                        <a href="#" class="button blue">Find air tickets</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container flex between a_center">
+                <a href="#" class="logo">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <div class="footer_menu flex ">
+                    <ul class="footer_menu_lists flex ">
+                        <li><a href="#">Apply for bank cards</a></li>
+                        <li><a href="#">Russian bank card to up</a></li>
+                        <li><a href="#">Travel insurance</a></li>
+                        <li><a href="#">Green card for vehicle</a></li>
+                        <li><a href="#">Air tickets</a></li>
+                        <li><a href="#">Hotels</a></li>
+                    </ul>
+                    <a href="#" class="button blue">Our Blog</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal">
+        <div class="modal_content">
+            <div class="modal_exit">
+                <span>&times;</span>
+            </div>
+            <h2 class="modal_title">
+                Select city
+            </h2>
+            <div class="modal_tab_btns flex wrap a_center">
+                <a href="#modal_tab1" class="modal_tab_btn flex a_center active">
+                    A
+                </a>
+                <a href="#modal_tab2" class="modal_tab_btn flex a_center">
+                    B
+                </a>
+                <a href="#modal_tab3" class="modal_tab_btn flex a_center">
+                    C
+                </a>
+                <a href="#modal_tab4" class="modal_tab_btn flex a_center">
+                    D
+                </a>
+                <a href="#modal_tab5" class="modal_tab_btn flex a_center">
+                    E
+                </a>
+                <a href="#modal_tab6" class="modal_tab_btn flex a_center">
+                    F
+                </a>
+                <a href="#modal_tab7" class="modal_tab_btn flex a_center">
+                    G
+                </a>
+                <a href="#modal_tab8" class="modal_tab_btn flex a_center">
+                    H
+                </a>
+                <a href="#modal_tab9" class="modal_tab_btn flex a_center">
+                    I
+                </a>
+                <a href="#modal_tab10" class="modal_tab_btn flex a_center">
+                    J
+                </a>
+            </div>
+            <div class="modal_tab_content">
+                <div class="modal_item" id="modal_tab1">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab2">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab3">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab4">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab5">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab6">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab7">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab8">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab9">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_item" id="modal_tab10">
+                    <div class="flex a_start modal_links">
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                        <ul class="flex column">
+                            <li><a href="#">Abakan</a></li>
+                            <li><a href="#">Almetyevsk</a></li>
+                            <li><a href="#">Anadyr</a></li>
+                            <li><a href="#">Anapa</a></li>
+                            <li><a href="#">Arkhangelsk</a></li>
+                            <li><a href="#">Astrakhan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_register_b">
+        <div class="modal_content">
+            <!-- Exit va back -->
+            <div class="modal_header flex between a_center">
+                <div class="steps_back"><img src="assets/images/left.svg" alt=""><span>Back</span></div>
+                <div class="modal_exit"><span>&times;</span></div>
+            </div>
+            <!-- Step container -->
+            <div class="modal_steps">
+                <!-- Step 1 -->
+                <div class="step active" data-step="1">
+                    <span class="step_number">Step 1</span>
+                    <h2 class="modal_title">Vehicle owner</h2>
+                    <p class="step_text">Choose the owner</p>
+                    <div class="options flex center">
+                        <div class="option" data-next="2">
+                            <img src="assets/images/user.svg" alt="">
+                            <p>Owner listed on the registration Individual</p>
+                        </div>
+                        <div class="option" data-next="2">
+                            <img src="assets/images/worker.svg" alt="">
+                            <p>Owner listed on the registration Company / legal entity</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step" data-step="2">
+                    <span class="step_number">Step 2</span>
+                    <h2 class="modal_title">Engine power</h2>
+                    <p class="step_text">Choose the engine power in kilowatts (kW). It’s usually shown in the vehicle
+                        registration, field P.2.</p>
+                    <div class="options grid_2">
+                        <div class="option" data-next="3" data-value="51kW">
+                            <div class="option_bold">Up to 51</div>
+                            <p>Up to 51.48 kW</p>
+                        </div>
+                        <div class="option" data-next="3" data-value="51-73kw">
+                            <div class="option_bold">51-73</div>
+                            <p>51.48–73.55 kW</p>
+                        </div>
+                        <div class="option" data-next="3" data-value="73-88kw">
+                            <div class="option_bold">73-88</div>
+                            <p>73.55–88.26 kW</p>
+                        </div>
+                        <div class="option" data-next="3" data-value="88-110kw">
+                            <div class="option_bold">88-110</div>
+                            <p>88.26–110.33 kW</p>
+                        </div>
+                        <div class="option" data-next="3" data-value="110+kw">
+                            <div class="option_bold">110+</div>
+                            <p>Over 110.33 kW</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="step" data-step="3">
+                    <span class="step_number">Step 3</span>
+                    <h2 class="modal_title title_text">---- kW</h2>
+                    <div class="flex dates between">
+                        <label class="flex column">
+                            <span>Policy start date</span>
+                            <input type="date" value="2022-12-31" class="policy_date">
+                            <img src="assets/images/calendar.svg" alt="">
+                        </label>
+                        <label class="flex column">
+                            <span>Duration</span>
+                            <select>
+                                <option>15 days</option>
+                                <option>30 days</option>
+                                <option>90 days</option>
+                            </select>
+                            <img src="assets/images/arrws.svg" alt="">
+                        </label>
+                    </div>
+                    <div class="flex btn_box a_center">
+                        <button class="btn_next button blue" data-next="4">Next</button>
+                        <div class="modal_prices"><b>Final price: </b> <span> 4061 ₽</span></div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="step" data-step="4">
+                    <span class="step_number">Step 4</span>
+                    <h2 class="modal_title">Owner details</h2>
+                    <p class="step_text">The policy lists only the vehicle owner. There’s no limit on the number of
+                        drivers. The liability of anyone driving the vehicle is insured under the policy.</p>
+                    <div class="flex dates between">
+                        <label class="flex column">
+                            <span>Your e-mail</span>
+                            <input type="email" placeholder="example@gmail.com">
+                        </label>
+                        <label class="flex column">
+                            <span>Phone number</span>
+                            <input type="tel" placeholder="+371 67 81 53 33">
+                        </label>
+                    </div>
+                    <div class="switch_wrapper flex a_end">
+                        <div class="flex column">
+                            <span class="switch_title">Add trailer</span>
+                            <label class="switch_label">
+                                <input type="checkbox" class="switch_input">
+                                <span class="switch_slider"></span>
+                            </label>
+                        </div>
+                        <span class="switch_desc">Enable if the vehicle is used with a trailer.</span>
+                    </div>
+                    <div class="upload-wrapper">
+                        <h3>Attach a photo or scan of the vehicle registration certificate and the policyholder’s
+                            passport.</h3>
+
+                        <div class="upload-area" id="uploadArea">
+                            <!-- previewlar shu yerga dinamik qo‘shiladi -->
+
+                            <label class="upload-box">
+                                <input type="file" id="fileInput2" accept="image/*" multiple />
+                                <div class="upload-content flex column a_center center">
+                                    <img src="assets/images/upload.svg" alt="">
+                                    <span>Upload file</span>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="note">These documents are required by the insurer.</p>
+                    </div>
+                    <button class="btn_next button blue" data-next="5">Next</button>
+                </div>
+                <!-- Step 5 -->
+                <div class="step step5" data-step="5">
+                    <h2 class="modal_title">Summary</h2>
+                    <div class="modal_prices"><b>Final price:</b> <span>4061 ₽</span></div>
+                    <div class="modal_policy flex column ">
+                        <div class="modal_policy_title">Policy order details</div>
+                        <p>* Please check that all data is correct</p>
+                    </div>
+                    <div class="summary_box">
+                        <ul>
+                            <li>
+                                <p>Vehicle type</p><span>Passenger car (Category B)</span>
+                            </li>
+                            <li>
+                                <p>Vehicle owner</p><span>Individual</span>
+                            </li>
+                            <li>
+                                <p>Engine power </p><span>51.48–73.55 kW</span>
+                            </li>
+                            <li>
+                                <p>Policy start date </p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>Duration </p><span>15 days</span>
+                            </li>
+                            <li>
+                                <p>Owner’s full name or company name</p><span>-</span>
+                            </li>
+                            <li>
+                                <p>Date of birth or company tax ID </p><span>51.48–73.55 kW</span>
+                            </li>
+                            <li>
+                                <p>Owner’s passport No. or company <br> registration certificate No.</p><span>EA
+                                    165853</span>
+                            </li>
+                            <li>
+                                <p>Passport issue date / company registration
+                                    issue date </p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>Contact phone</p><span>+375333359564</span>
+                            </li>
+                            <li>
+                                <p>Make (brand)</p><span>Lada</span>
+                            </li>
+                            <li>
+                                <p>Model</p><span>Granta</span>
+                            </li>
+                            <li>
+                                <p>Year</p><span>2025</span>
+                            </li>
+                            <li>
+                                <p>Registration plate number</p><span>AK4733</span>
+                            </li>
+                            <li>
+                                <p>VIN</p><span>MD568695848382848</span>
+                            </li>
+                            <li>
+                                <p>Engine power</p><span>150</span>
+                            </li>
+                            <li>
+                                <p>Country of registration</p><span>Belarus</span>
+                            </li>
+                            <li>
+                                <p>Registration certificate No.</p><span>EA265859568</span>
+                            </li>
+                            <li>
+                                <p>Registration certificate issue date</p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>No/Yes</p><span>03.09.2025</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal_checkbox_content">
+                        <label class="flex a_start">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" name="policy" required checked>
+                                <div class="custom-checkbox"></div>
+                                <span></span>
+                            </div>
+                            <p>
+                                I confirm that I have read and agree that the policy’s territory of coverage is the
+                                Russian Federation, and that the policy cannot be canceled and is non-refundable, in
+                                whole or in part, either before or after the start date.
+                            </p>
+                        </label>
+                        <label class="flex a_start">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" name="pol" required checked>
+                                <div class="custom-checkbox"></div>
+                                <span></span>
+                            </div>
+                            <p>
+                                I agree to the policy price and understand that policies are submitted for processing on
+                                business days, Monday–Friday 10:00–18:00 (Moscow time). Orders received outside these
+                                hours or on weekends will be submitted on the next business day.
+                            </p>
+                        </label>
+                    </div>
+                    <div class="flex betwen modal_footer">
+
+                        <button class="btn_next button blue" type="submit" data-next="6">Proceed to payment</button>
+                        <div class="button light modal_edit1" data-next="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.2407 6.36978L17.2857 5.32779C16.9165 4.92498 16.2924 4.89305 15.884 5.25609L14.3213 6.64547L16.6194 9.18253L18.1714 7.78964C18.5854 7.41803 18.6166 6.77993 18.2407 6.36978ZM5.5 14.4879L13.2002 7.64215L15.5031 10.1844L7.90674 17.0022H5.5V14.4879ZM19.3465 5.3563L18.3915 4.31431C17.4686 3.30729 15.9083 3.22747 14.8874 4.13506L4.33557 13.5161C4.12212 13.7058 4 13.9778 4 14.2634V17.5022C4 18.0545 4.44772 18.5022 5 18.5022H8.09822C8.34478 18.5022 8.58266 18.4111 8.76616 18.2464L19.1733 8.90597C20.2084 7.97694 20.2863 6.38169 19.3465 5.3563ZM20 19.9996H4V21.4996H20V19.9996Z"
+                                    fill="#6E44D9" />
+                            </svg>
+                            <span>Edit details</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 6 -->
+                <div class="step" data-step="6">
+                    <div class="flex center a_center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="94" height="93" viewBox="0 0 94 93" fill="none">
+                            <g clip-path="url(#clip0_696_2278)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.60746 42.4462L23.7798 61.643L62.2485 23.1255L66.356 27.2381L25.8335 67.812C24.6993 68.9478 22.8603 68.9478 21.7261 67.812L0.5 46.5592L4.60746 42.4462ZM50.9056 61.6422L44.9195 55.6445L40.7977 59.7427L48.8503 67.8112C49.3951 68.3568 50.1337 68.6637 50.9044 68.6637C51.6748 68.6637 52.4138 68.3576 52.9586 67.812L93.481 27.2381L89.3735 23.1255L50.9056 61.6422Z"
+                                    fill="url(#paint0_radial_696_2278)" />
+                            </g>
+                            <defs>
+                                <radialGradient id="paint0_radial_696_2278" cx="0" cy="0" r="1"
+                                    gradientTransform="matrix(4.02748 33.7987 -69.0109 1.9725 70.8096 33.0835)"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#CF06F2" />
+                                    <stop offset="0.05" stop-color="#C705EF" />
+                                    <stop offset="0.5" stop-color="#8D02DC" />
+                                    <stop offset="0.83" stop-color="#6900D0" />
+                                    <stop offset="1" stop-color="#5C00CC" />
+                                </radialGradient>
+                                <clipPath id="clip0_696_2278">
+                                    <rect width="93" height="93" fill="white" transform="translate(0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2 class="succes_text">Your application has been received and assigned to a manager.</h2>
+                    <p class="succes_desc">We will contact you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal_register_ac">
+        <div class="modal_content">
+            <!-- Exit va back -->
+            <div class="modal_header flex between a_center">
+                <div class="steps_back"><img src="assets/images/left.svg" alt=""><span>Back</span></div>
+                <div class="modal_exit"><span>&times;</span></div>
+            </div>
+
+            <!-- Step container -->
+            <div class="modal_steps">
+                <!-- Step 1 -->
+                <div class="step active" data-step="1">
+                    <span class="step_number">Step 1</span>
+                    <h2 class="modal_title">Vehicle owner</h2>
+                    <p class="step_text">Choose the owner</p>
+                    <div class="options flex center">
+                        <div class="option" data-next="2">
+                            <img src="assets/images/user.svg" alt="">
+                            <p>Owner listed on the registration Individual</p>
+                        </div>
+                        <div class="option" data-next="2">
+                            <img src="assets/images/worker.svg" alt="">
+                            <p>Owner listed on the registration Company / legal entity</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step" data-step="2">
+                    <span class="step_number">Step 2</span>
+                    <h2 class="modal_title">Owner details</h2>
+                    <p class="step_text">The policy lists only the vehicle owner. There’s no limit on the number of
+                        drivers. The liability of anyone driving the vehicle is insured under the policy.</p>
+                    <div class="flex dates between">
+                        <label class="flex column">
+                            <span>Your e-mail</span>
+                            <input type="email" placeholder="example@gmail.com">
+                        </label>
+                        <label class="flex column">
+                            <span>Phone number</span>
+                            <input type="tel" placeholder="+371 67 81 53 33">
+                        </label>
+                    </div>
+                    <div class="switch_wrapper flex a_end">
+                        <div class="flex column">
+                            <span class="switch_title">Add trailer</span>
+                            <label class="switch_label">
+                                <input type="checkbox" class="switch_input">
+                                <span class="switch_slider"></span>
+                            </label>
+                        </div>
+                        <span class="switch_desc">Enable if the vehicle is used with a trailer.</span>
+                    </div>
+                    <div class="upload-wrapper">
+                        <h3>Attach a photo or scan of the vehicle registration certificate and the policyholder’s
+                            passport.</h3>
+
+                        <div class="upload-area" id="uploadArea">
+                            <label class="upload-box">
+                                <input type="file" id="fileInput1" accept="image/*" multiple />
+                                <div class="upload-content flex column a_center center">
+                                    <img src="assets/images/upload.svg" alt="">
+                                    <span>Upload file</span>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="note">These documents are required by the insurer.</p>
+                    </div>
+                    <button class="btn_next button blue" data-next="3">Next</button>
+                </div>
+                <!-- Step 3 -->
+                <div class="step" data-step="3">
+                    <h2 class="modal_title">Summary</h2>
+                    <div class="modal_prices"><b>Final price:</b> <span>4061 ₽</span></div>
+                    <div class="modal_policy flex column ">
+                        <div class="modal_policy_title">Policy order details</div>
+                        <p>* Please check that all data is correct</p>
+                    </div>
+                    <div class="summary_box">
+                        <ul>
+                            <li>
+                                <p>Vehicle type</p><span>Passenger car (Category B)</span>
+                            </li>
+                            <li>
+                                <p>Vehicle owner</p><span>Individual</span>
+                            </li>
+                            <li>
+                                <p>Engine power </p><span>51.48–73.55 kW</span>
+                            </li>
+                            <li>
+                                <p>Policy start date </p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>Duration </p><span>15 days</span>
+                            </li>
+                            <li>
+                                <p>Owner’s full name or company name</p><span>-</span>
+                            </li>
+                            <li>
+                                <p>Date of birth or company tax ID </p><span>51.48–73.55 kW</span>
+                            </li>
+                            <li>
+                                <p>Owner’s passport No. or company <br> registration certificate No.</p><span>EA
+                                    165853</span>
+                            </li>
+                            <li>
+                                <p>Passport issue date / company registration
+                                    issue date </p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>Contact phone</p><span>+375333359564</span>
+                            </li>
+                            <li>
+                                <p>Make (brand)</p><span>Lada</span>
+                            </li>
+                            <li>
+                                <p>Model</p><span>Granta</span>
+                            </li>
+                            <li>
+                                <p>Year</p><span>2025</span>
+                            </li>
+                            <li>
+                                <p>Registration plate number</p><span>AK4733</span>
+                            </li>
+                            <li>
+                                <p>VIN</p><span>MD568695848382848</span>
+                            </li>
+                            <li>
+                                <p>Engine power</p><span>150</span>
+                            </li>
+                            <li>
+                                <p>Country of registration</p><span>Belarus</span>
+                            </li>
+                            <li>
+                                <p>Registration certificate No.</p><span>EA265859568</span>
+                            </li>
+                            <li>
+                                <p>Registration certificate issue date</p><span>03.09.2025</span>
+                            </li>
+                            <li>
+                                <p>No/Yes</p><span>03.09.2025</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal_checkbox_content">
+                        <label class="flex a_start">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <div class="custom-checkbox"></div>
+                                <span></span>
+                            </div>
+                            <p>
+                                I confirm that I have read and agree that the policy’s territory of coverage is the
+                                Russian Federation, and that the policy cannot be canceled and is non-refundable, in
+                                whole or in part, either before or after the start date.
+                            </p>
+                        </label>
+                        <label class="flex a_start">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <div class="custom-checkbox"></div>
+                                <span></span>
+                            </div>
+                            <p>
+                                I agree to the policy price and understand that policies are submitted for processing on
+                                business days, Monday–Friday 10:00–18:00 (Moscow time). Orders received outside these
+                                hours or on weekends will be submitted on the next business day.
+                            </p>
+                        </label>
+                    </div>
+                    <div class="flex betwen modal_footer">
+
+                        <button class="btn_next button blue" data-next="4">Proceed to payment</button>
+                        <div class="button light modal_edit1" data-next="2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.2407 6.36978L17.2857 5.32779C16.9165 4.92498 16.2924 4.89305 15.884 5.25609L14.3213 6.64547L16.6194 9.18253L18.1714 7.78964C18.5854 7.41803 18.6166 6.77993 18.2407 6.36978ZM5.5 14.4879L13.2002 7.64215L15.5031 10.1844L7.90674 17.0022H5.5V14.4879ZM19.3465 5.3563L18.3915 4.31431C17.4686 3.30729 15.9083 3.22747 14.8874 4.13506L4.33557 13.5161C4.12212 13.7058 4 13.9778 4 14.2634V17.5022C4 18.0545 4.44772 18.5022 5 18.5022H8.09822C8.34478 18.5022 8.58266 18.4111 8.76616 18.2464L19.1733 8.90597C20.2084 7.97694 20.2863 6.38169 19.3465 5.3563ZM20 19.9996H4V21.4996H20V19.9996Z"
+                                    fill="#6E44D9" />
+                            </svg>
+                            <span>Edit details</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="step" data-step="4">
+                    <div class="flex center a_center">
+                        <img src="assets/images/succes.svg" alt="">
+                    </div>
+                    <h2 class="succes_text">Your application has been received and assigned to a manager.</h2>
+                    <p class="succes_desc">We will contact you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://attolloassistance.com/widget/solid/solid_widget.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/jquery.inputmask.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+.profile {
+  padding-top: 202px;
+  padding-bottom: 90px;
+  @media (max-width: 1099px) {
+    padding-top: 230px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 60px;
+  }
+  @media (max-width: 650px) {
+    padding-top: 150px;
+  }
+  .section_title {
+    text-align: left;
+    margin-top: 36px;
+    @media (max-width: 768px) {
+      font-size: 28px;
+      margin-top: 20px;
+    }
+  }
+  &_content {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 22px;
+    }
+  }
+  &_sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc(22.84% - 31px);
+    @media (max-width: 1200px) {
+      width: calc(25% - 21px);
+    }
+    @media (max-width: 1024px) {
+      width: calc(30% - 11px);
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    a {
+      padding: 17px 12px 17px 19px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 27px;
+      border-radius: 10px;
+      opacity: 0.6;
+      background: rgba(255, 255, 255, 0.07);
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+      &.active {
+        opacity: 1;
+        background: radial-gradient(
+          74.35% 74.35% at 75.62% 21.87%,
+          #cf06f2 0%,
+          #c705ef 5%,
+          #8d02dc 50%,
+          #6900d0 83%,
+          #5c00cc 100%
+        );
+      }
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+  &_form {
+    width: calc(77.16% - 31px);
+    @media (max-width: 1200px) {
+      width: calc(75% - 21px);
+    }
+    @media (max-width: 1024px) {
+      width: calc(70% - 11px);
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    &_title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    &_top {
+      padding: 30px;
+      border-radius: 16px;
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 768px) {
+        padding: 20px;
+      }
+    }
+    .app_status {
+      display: flex;
+      padding: 20px;
+      border-radius: 10px;
+      gap: 16px;
+      margin-top: 36px;
+      border: 1px solid #fff;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+      h3 {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 27px;
+        flex: 0 0 auto;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        max-width: 70%;
+        @media (max-width: 768px) {
+          max-width: 100%;
+        }
+      }
+    }
+    .profile_info {
+      margin-top: 36px;
+      &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .button {
+          @media (max-width: 768px) {
+            font-size: 15px;
+            padding: 12px 20px;
+          }
+        }
+      }
+      &_title {
+        font-size: 34px;
+        font-weight: 700;
+        @media (max-width: 768px) {
+          font-size: 20px;
+        }
+      }
+      &_items {
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 29px;
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+          padding-bottom: 15px;
+          gap: 10px;
+          span {
+            display: block;
+            width: 50%;
+            font-size: 18px;
+          }
+        }
+      }
+      &.valet {
+        margin-top: 0;
+        .profile_info_items {
+          li {
+            padding-bottom: 0;
+            border: 0;
+          }
+        }
+      }
+    }
+    .form {
+      gap: 14px;
+      align-items: center;
+      display: none;
+      &.active {
+        display: flex;
+      }
+      &_title {
+        font-size: 18px;
+      }
+      label {
+        position: relative;
+        margin-top: 15px;
+        display: block;
+        input {
+          border-radius: 8px;
+          border: 1px solid #e2e2e2;
+          background: #fff;
+          width: 100%;
+          max-width: 443px;
+          padding: 12px 14px 12px 16px;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          outline: none;
+        }
+        img {
+          position: absolute;
+          top: 13px;
+          background: #fff;
+          right: 14px;
+        }
+      }
+      &_info {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        a {
+          text-transform: uppercase;
+          color: #cf06f2;
+          text-decoration: underline;
+        }
+      }
+      &_bottom {
+        margin-top: 56px;
+
+        display: none;
+        &.active {
+          display: block;
+        }
+        .app_text {
+          font-size: 18px;
+          margin-top: 20px;
+        }
+        .link_item {
+          margin-top: 37px;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 27px;
+          a {
+            color: #cf06f2;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .instruction {
+      margin-top: 56px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      &_title {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 27px;
+      }
+      &_btn {
+        display: flex;
+        align-items: center;
+        border-radius: 9px;
+        background: #332656;
+        box-shadow: 0 -4px 6px 0 rgba(0, 0, 0, 0.02) inset;
+        gap: 6px;
+        margin-top: 20px;
+        padding: 13px 21px 13px 17px;
+        width: fit-content;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .profile_form_lock {
+    gap: 10px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      align-items: flex-start !important;
+      gap: 5px;
+    }
+    h2 {
+      font-size: 34px;
+      line-height: 37px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+}

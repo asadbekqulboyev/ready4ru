@@ -1,0 +1,102 @@
+.destinations {
+  padding-top: 110px;
+  padding-bottom: 90px;
+
+  @media (max-width: 992px) {
+  }
+  &_items {
+    margin-top: 50px;
+    gap: 40px 0;
+
+    @media (max-width: 556px) {
+      gap: 20px 0;
+    }
+  }
+  &_item {
+    position: relative;
+    width: calc(25% - 20px);
+    overflow: hidden;
+    border-radius: 40px;
+    line-height: 0;
+    margin-top: 0;
+    &:hover {
+      .destinations_item_info {
+        background: transparent;
+      }
+    }
+    @media (max-width: 1024px) {
+      width: calc(50% - 20px);
+    }
+    @media (max-width: 556px) {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    &_info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      padding: 31px;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #6a23a48a 0%, #29075982 100%);
+        transition: opacity 0.6s ease;
+        z-index: 0;
+      }
+      &:hover::before {
+        opacity: 0;
+      }
+      * {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    h3 {
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 28px;
+      line-height: 28px;
+      letter-spacing: 0%;
+    }
+  }
+  .button {
+    margin-top: 50px;
+    @media (max-width: 556px) {
+      margin-top: 40px;
+    }
+  }
+  &.air_ticket {
+    .destinations_item:nth-child(n + 4) {
+      display: block;
+      @media (max-width: 556px) {
+        display: none;
+      }
+    }
+    .all_items {
+      color: #fff;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 27px;
+      border-bottom: 1px dashed #fff;
+      text-align: center;
+      width: fit-content;
+      margin: 30px auto 0;
+      cursor: pointer;
+      padding-bottom: 9px;
+      display: none;
+      @media (max-width: 556px) {
+        display: block;
+      }
+    }
+  }
+}

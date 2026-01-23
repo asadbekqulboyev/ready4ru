@@ -1,0 +1,55 @@
+.booking_option {
+  &_items {
+    margin-top: 50px;
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 40px 0;
+    }
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+  }
+
+  &_item {
+    padding: 62px 10px 45px;
+    border: 1px solid #6e44d9;
+    width: calc(25% - 20px);
+    border-radius: 40px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      backdrop-filter: blur(30px);
+      background: rgba(255, 255, 255, 0.03);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    @media (max-width: 1200px) {
+      padding: 40px 10px 30px;
+    }
+    @media (max-width: 1024px) {
+      width: calc(50% - 20px);
+    }
+    @media (max-width: 556px) {
+      width: 100%;
+    }
+
+    img {
+      max-width: 90%;
+    }
+    .booking_option_title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 100%;
+      text-align: center;
+      color: #fff;
+      margin-top: 56px;
+      @media (max-width: 1200px) {
+        margin-top: 40px;
+      }
+    }
+    p {
+      font-weight: 400;
+      color: #fff;
+      font-size: 22px;
+    }
+  }
+}

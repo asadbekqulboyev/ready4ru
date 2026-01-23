@@ -1,0 +1,372 @@
+.hero {
+  background: #1a073f url("../images/hero.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 259px;
+  @media (max-width: 768px) {
+    padding-top: 180px;
+  }
+  .star_right {
+    position: absolute;
+    right: 10%;
+    top: 29%;
+    @media (max-width: 768px) {
+      width: 76px;
+      top: 22%;
+      right: 22%;
+    }
+  }
+  .shadow {
+    position: absolute;
+    top: -70%;
+    left: -50%;
+    max-width: 100%;
+  }
+  .container {
+    position: relative;
+  }
+  &_elipse_big {
+    position: absolute;
+    right: -150px;
+    top: -150px;
+    @media (max-width: 768px) {
+      width: 46px;
+      right: 24px;
+      top: 0;
+    }
+  }
+  &_title {
+    color: #fff;
+    font-family: "Segoe UI";
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 78px;
+    max-width: 967px;
+    &.uepper {
+      text-transform: uppercase;
+    }
+    &.max {
+      max-width: 100%;
+    }
+    @media (max-width: 992px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    @media (max-width: 768px) {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 45px;
+      align-items: flex-end;
+    }
+    img {
+      @media (max-width: 768px) {
+        max-width: 96px;
+      }
+    }
+  }
+  &_tab_btns {
+    gap: 9px;
+    margin-top: 40px;
+    position: relative;
+    z-index: 22;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 992px) {
+      overflow-x: auto;
+      width: calc(100% + 30px);
+      padding-right: 30px;
+    }
+    .hero_tab_btn {
+      border-radius: 9px 9px 0px 0px;
+      background: #332656;
+      box-shadow: 0px -4px 6px 0px rgba(0, 0, 0, 0.02) inset;
+      color: #fff;
+      padding: 13px 23px;
+      gap: 12px;
+      transition: all 0.2s linear;
+      @media (max-width: 1200px) {
+        padding: 13px 15px;
+        gap: 8px;
+      }
+      @media (max-width: 992px) {
+        flex: 0 0 auto;
+      }
+      @media (max-width: 768px) {
+        padding: 11px 12px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+      br {
+        @media (max-width: 1200px) {
+          display: none;
+        }
+        @media (max-width: 992px) {
+          display: inline-block;
+        }
+      }
+      &.active {
+        background: #6e44d9;
+      }
+      &:hover {
+        background: #6e44d9;
+      }
+    }
+  }
+  &_tab_content {
+    position: relative;
+    .hand_img {
+      position: absolute;
+      right: -32%;
+      top: -190%;
+      z-index: 2;
+      @media (max-width: 1200px) {
+        width: 356px;
+        top: -130%;
+      }
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+    .tab_item {
+      .button {
+        transition: all 0.2s linear;
+        position: relative;
+        z-index: 2;
+        transition: all 0.2s linear;
+        flex: 0 0 auto;
+        &:hover {
+          background: radial-gradient(
+            74.35% 74.35% at 75.62% 21.87%,
+            #cf06f2 0%,
+            #c705ef 5%,
+            #8d02dc 50%,
+            #6900d0 83%,
+            #5c00cc 100%
+          );
+        }
+      }
+      .tab_item_content {
+        border-radius: 0px 20px 20px 20px;
+        background: #fff;
+        padding: 32px 40px;
+        color: #0a2540;
+        @media (max-width: 992px) {
+          gap: 20px;
+        }
+        @media (max-width: 768px) {
+          padding: 28px;
+          border-radius: 0px 0px 20px 20px;
+          font-size: 21px;
+          font-style: normal;
+          font-weight: 600;
+        }
+        @media (max-width: 556px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .tab_item_title {
+          @media (max-width: 768px) {
+            font-size: 21px;
+          }
+        }
+      }
+      img {
+        max-width: 30%;
+        object-fit: contain;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &_elipse_small {
+    position: absolute;
+    bottom: 0;
+    left: -182px;
+    &.img2 {
+      left: -15%;
+      bottom: 37%;
+    }
+  }
+  &_tab {
+    position: relative;
+    z-index: 22;
+  }
+  &_check_items {
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      padding-bottom: 20px;
+      gap: 40px 0;
+    }
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      gap: 28px;
+      margin-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+  &_check_item {
+    width: 100%;
+    padding: 0 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    @media (max-width: 1130px) {
+      padding: 0 15px;
+    }
+    @media (max-width: 1024px) {
+      width: 33.33%;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+    p {
+      padding-top: 11px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      @media (max-width: 1130px) {
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
+        padding: 0;
+      }
+    }
+  }
+  .buttons_title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 79px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 556px) {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+  }
+  .hero_buttons {
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 58px;
+    @media (max-width: 1024px) {
+      gap: 8px;
+      justify-content: flex-start !important;
+    }
+    @media (max-width: 768px) {
+      gap: 7px;
+      margin-top: 30px;
+    }
+
+    a {
+      padding: 18px 21px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(15px);
+      color: #fff;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      display: block;
+      line-height: 24px;
+      @media (max-width: 1200px) {
+        padding: 16px 18px;
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
+        padding: 13px 14px;
+        line-height: 20px;
+        font-size: 16px;
+        font-weight: 550;
+      }
+      &.active {
+        background: radial-gradient(
+          74.35% 74.35% at 75.62% 21.87%,
+          #cf06f2 0%,
+          #c705ef 5%,
+          #8d02dc 50%,
+          #6900d0 83%,
+          #5c00cc 100%
+        );
+      }
+    }
+
+    &.sm {
+      gap: 11px;
+      margin-top: 22px;
+      @media (max-width: 556px) {
+        margin-top: 16px;
+        gap: 5px;
+      }
+      a {
+        padding: 12px;
+        border-radius: 7px;
+        border: 1px solid rgba(255, 255, 255, 0.27);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(3px);
+        color: #fff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        display: block;
+        line-height: 24px;
+        &.active {
+          border-color: #6e44d9;
+          background: #6e44d9;
+        }
+
+        @media (max-width: 1200px) {
+          padding: 16px 18px;
+          font-size: 16px;
+        }
+        @media (max-width: 768px) {
+          padding: 8px 9px;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+  &_toptitle {
+    color: #fff;
+    font-family: "Segoe UI";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 78px;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 40px;
+    }
+    @media (max-width: 556px) {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
+}

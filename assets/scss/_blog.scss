@@ -1,0 +1,162 @@
+.hero.blog {
+  background: url("../images/blog1.png") no-repeat top center;
+  background-size: cover;
+  animation: bg_zoom 6s ease-in-out infinite alternate;
+  @media (max-width: 768px) {
+    animation: bg_zoom_mobile 6s ease-in-out infinite alternate;
+  }
+  h2 {
+    text-align: left;
+    margin-top: 79px;
+    @media (max-width: 1200px) {
+      margin-top: 56px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 60px;
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+
+  .popular_items {
+    margin-top: 45px;
+    gap: 40px 0;
+    @media (max-width: 556px) {
+      margin-top: 30px;
+    }
+    .popular_item {
+      width: calc(25% - 20px);
+      padding: 30px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(4px);
+      @media (max-width: 1270px) {
+        width: calc(25% - 14px);
+        padding: 25px;
+      }
+      @media (max-width: 1200px) {
+        width: calc(25% - 8px);
+        padding: 20px;
+      }
+      @media (max-width: 1024px) {
+        width: calc(33.33% - 8px);
+        padding: 20px;
+      }
+      @media (max-width: 768px) {
+        width: calc(50% - 8px);
+        padding: 20px;
+      }
+      @media (max-width: 556px) {
+        width: 100%;
+        padding: 20px;
+      }
+      .popular_top {
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      &_title {
+        color: #fff;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        margin-top: 22px;
+        @media (max-width: 1200px) {
+          font-size: 17px;
+          margin-top: 16px;
+        }
+        @media (max-width: 556px) {
+          font-size: 18px;
+          margin-top: 17px;
+        }
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-top: 16px;
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+      }
+      .button {
+        margin-top: 20px;
+        @media (max-width: 768px) {
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+  .read_all {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6e44d9;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border-radius: 10px;
+    border: 1px solid #6e44d9;
+    padding: 22px;
+    @media (max-width: 556px) {
+      margin-top: 30px;
+    }
+  }
+  .popular {
+    padding-bottom: 90px;
+  }
+  &.blog2 {
+    background: url("../images/blog2.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog3 {
+    background: url("../images/blog3.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog4 {
+    background: url("../images/blog4.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog5 {
+    background: url("../images/blog5.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog6 {
+    background: url("../images/blog6.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog7 {
+    background: url("../images/blog7.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog8 {
+    background: url("../images/blog8.png") no-repeat top center;
+    background-size: cover;
+  }
+  &.blog9 {
+    background: url("../images/blog9.png") no-repeat top center;
+    background-size: cover;
+  }
+}
+@keyframes bg_zoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 120%;
+  }
+}
+@keyframes bg_zoom_mobile {
+  from {
+    background-size: 290%;
+    background-position: -200px top;
+  }
+  to {
+    background-position: -200px top;
+    background-size: 320%;
+  }
+}

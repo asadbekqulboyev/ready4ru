@@ -1,0 +1,445 @@
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_Boldi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("../fonts/Segoe_UI/Segoe_UI.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import "header";
+@import "hero";
+@import "block";
+@import "price";
+@import "card";
+@import "faq";
+@import "modal";
+@import "travel_insurance";
+@import "booking";
+@import "destinations";
+@import "faild";
+@import "profile";
+@import "blog";
+@import "wiews";
+
+body {
+  color: #fff;
+  font-family: "Segoe UI" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  background: #1a073f;
+  transition: all 0.2s linear;
+  &.hidden {
+    overflow: hidden;
+  }
+}
+.bg {
+  position: relative;
+  display: none;
+  @media (max-width: 556px) {
+    display: block;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    min-width: 100%;
+  }
+}
+.profile_bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  z-index: 1;
+  object-fit: cover;
+  height: 100%;
+  max-height: 100%;
+}
+.wrapper {
+  overflow: hidden;
+  background: url("../images/block_bg.png") no-repeat center;
+  background-size: cover;
+  @media (max-width: 556px) {
+    background: url("../images/mobile_bg.png") no-repeat center;
+    background-size: cover;
+  }
+  &.field_wrapper {
+    background-size: 590% 700%;
+  }
+}
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.breadcrumbs {
+  display: flex;
+  margin-top: 34px;
+  gap: 7px;
+  align-items: center;
+  a {
+    color: #fff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    opacity: 0.5;
+  }
+  span {
+    opacity: 0.5;
+  }
+  li {
+    list-style: none;
+  }
+}
+.flex {
+  display: flex;
+
+  &.between {
+    justify-content: space-between;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.end {
+    justify-content: flex-end;
+  }
+
+  &.start {
+    justify-content: flex-start;
+  }
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.a_center {
+    align-items: center;
+  }
+
+  &.a_start {
+    align-items: flex-start;
+  }
+
+  &.a_end {
+    align-items: flex-end;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.button {
+  cursor: pointer;
+  display: flex;
+  padding: 13px 29px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  transition: all 0.2s linear;
+  &:hover {
+    background: radial-gradient(
+      74.35% 74.35% at 75.62% 21.87%,
+      #cf06f2 0%,
+      #c705ef 5%,
+      #8d02dc 50%,
+      #6900d0 83%,
+      #5c00cc 100%
+    );
+  }
+  &.light {
+    background: #fff;
+    color: #6e44d9;
+    transition: all 0.2s linear;
+    &:hover {
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
+      color: #fff;
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+  &.blue {
+    border-radius: 10px;
+    background: #6e44d9;
+    color: #fff;
+    border-color: transparent;
+    &:hover {
+      border-color: transparent;
+      background: radial-gradient(
+        74.35% 74.35% at 75.62% 21.87%,
+        #cf06f2 0%,
+        #c705ef 5%,
+        #8d02dc 50%,
+        #6900d0 83%,
+        #5c00cc 100%
+      );
+    }
+  }
+}
+.footer {
+  padding-bottom: 90px;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 768px) {
+    padding-bottom: 40px;
+  }
+  .container {
+    gap: 10px;
+    @media (max-width: 1091px) {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    @media (max-width: 768px) {
+      gap: 21px;
+    }
+    .footer_menu {
+      gap: 14px;
+      @media (max-width: 1091px) {
+        width: 100%;
+      }
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+      }
+      @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        gap: 21px 0;
+      }
+    }
+    .logo {
+      img {
+        @media (max-width: 768px) {
+          width: 181px;
+        }
+      }
+    }
+  }
+  ul {
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(30px);
+    gap: 19px;
+    display: flex;
+    padding: 22px 30px;
+    align-items: center;
+    gap: 19px;
+    flex: 1 0 0;
+    @media (max-width: 1345px) {
+      gap: 8px;
+    }
+
+    @media (max-width: 1150px) {
+      padding: 22px 20px;
+    }
+    @media (max-width: 992px) {
+      width: 100%;
+      flex: 0 0 auto;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(30px);
+    }
+    li {
+      border-right: 1px solid rgba(255, 255, 255, 0.27);
+      @media (max-width: 768px) {
+        padding: 19px 0;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.27);
+        transition: all 0.2s linear;
+        border-right: 0;
+      }
+      &:last-child {
+        border: 0;
+      }
+    }
+    a {
+      display: block;
+      color: #fff;
+      margin-right: 19px;
+      transition: all 0.2s linear;
+      font-size: 14.5px;
+      font-style: normal;
+      font-weight: 400;
+      @media (max-width: 1345px) {
+        margin-right: 8px;
+        font-size: 15px;
+      }
+      @media (max-width: 1150px) {
+        font-size: 14px;
+      }
+      @media (max-width: 768px) {
+        padding-left: 0;
+        border: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    li {
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      &:first-child {
+        a {
+          @media (max-width: 768px) {
+            padding-top: 0;
+          }
+        }
+      }
+      &:last-child {
+        a {
+          @media (max-width: 768px) {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+    li:last-child {
+      a {
+        border: none;
+        padding-right: 0;
+      }
+    }
+  }
+  .button {
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+#solid_widget * {
+  font-family: "Roboto", sans-serif !important;
+}
+.form_solid {
+  padding: 0 !important;
+}
+#solid_widget {
+  font-family: "Segoe UI" !important;
+}
+.main_next {
+  .hero_title {
+    max-width: 100%;
+  }
+}
+.section_title {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+.text_center {
+  text-align: center;
+}
+.vehical_type {
+  padding-top: 110px;
+  @media (max-width: 1024px) {
+    padding-top: 80px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0px;
+  }
+  &_lineas {
+    margin-top: 40px;
+    @media (max-width: 768px) {
+      width: 80px;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+    img {
+      object-fit: contain;
+      max-width: 65%;
+
+      @media (max-width: 768px) {
+        max-width: auto;
+        width: auto;
+        height: 144px;
+        object-fit: cover;
+      }
+    }
+  }
+  .travel_insurance_cards {
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid #6e44d9;
+    background: rgba(26, 9, 69, 0.21);
+    box-shadow: 0 4px 79px 0 rgba(0, 0, 0, 0.03);
+    @media (max-width: 1024px) {
+      padding: 33px;
+    }
+    @media (max-width: 768px) {
+      padding: 30px;
+      margin-top: 40px;
+    }
+  }
+  .section_title {
+    @media (max-width: 556px) {
+      font-size: 28px;
+    }
+  }
+}
+.greencard {
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+  p {
+    margin-top: 27px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+}
+.btn_next.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.input_error {
+  border: 2px solid red !important;
+}
+
+//
