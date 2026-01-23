@@ -369,4 +369,25 @@
       line-height: 26px;
     }
   }
+  .air_ticket_hero {
+    @media (max-width: 556px) {
+      align-items: center !important;
+    }
+  }
+  .air_ticket_hero_img {
+    margin-bottom: -100px;
+    margin-right: -70px;
+    @media (max-width: 1200px) {
+      margin-bottom: -80px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 0px;
+      margin-right: 0px;
+      max-width: 159px;
+    }
+    @media (max-width: 556px) {
+      position: absolute;
+      right: 0;
+    }
+  }
 }

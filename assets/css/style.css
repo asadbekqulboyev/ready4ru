@@ -843,6 +843,33 @@
     line-height: 26px;
   }
 }
+@media (max-width: 556px) {
+  .hero .air_ticket_hero {
+    align-items: center !important;
+  }
+}
+.hero .air_ticket_hero_img {
+  margin-bottom: -100px;
+  margin-right: -70px;
+}
+@media (max-width: 1200px) {
+  .hero .air_ticket_hero_img {
+    margin-bottom: -80px;
+  }
+}
+@media (max-width: 768px) {
+  .hero .air_ticket_hero_img {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    max-width: 159px;
+  }
+}
+@media (max-width: 556px) {
+  .hero .air_ticket_hero_img {
+    position: absolute;
+    right: 0;
+  }
+}
 
 .blocks {
   padding: 110px 0 90px;
